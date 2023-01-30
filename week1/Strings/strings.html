@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <script type="text/javascript" src="strings.js"></script>
+</head>
+<body>
+    <h1>String-Methods</h1>
+    <ul>
+        <li>length method</li>
+        It counts the length of the string.
+
+        <!-- <input type="text" id="txt"/>
+        <button  onclick="str = document.getElementById('txt').value; strLength(str)">length</button>
+         -->
+        
+        <!-- <li>slice Method</li>
+        Lets slice javascript
+        <input type="number" id="s1"/>
+        <input type="number" id="s2"/>
+        <button  onclick="s = document.getElementById('s1').value,e = document.getElementById('s2').value; slice(s,e)">length</button>
+        
+        <li>substring Method</li> -->
+        similar to slice but any index lesser than 0 is considered 0 
+        <li>substr Method</li>
+        similar to slice but the second param is length
+        <li>replace Method</li>
+        This method replaces a part of the given string with another string 
+        <li>replaceAll Method</li>
+        replaces all occurances from string and can use reg-exp.
+        <li>toUpperCase Method</li>
+        converts string to uppercase
+        <li>toLowerCase Method</li>
+        converts string to lowercase
+        <li>concat Method</li>
+        concats the strings together
+        <li>trim Method</li>
+        it removes the white space from the string.
+        example: " &nbsp; Js is versatile.&nbsp;&nbsp;   "
+        <button onclick="strTrim()">Trim</button>
+        <li>trimStart Method</li>
+        it removes the white space from the start of the string.
+        example: " &nbsp; Js is versatile.&nbsp;&nbsp;   "
+        length=19
+        <button onclick="strTrimStart()">TrimStart</button>
+        <li>trimEnd Method</li>
+        it removes the white space from the end of the string.
+        example: " &nbsp; Js is versatile.&nbsp;&nbsp;   "
+        length=19
+        <button onclick="strTrimEnd()">TrimEnd</button>
+        <li>padStart Method</li>
+        This method pads a string with another string from the starting.
+        lets pad "js" with other string
+        <li>padEnd Method</li>
+        This method pads a string with another string from the end.
+        lets pad "js" with other string
+        <li>charAt Method</li>
+        method returns the character at a specified index (position) in a string:
+        example:Javascript
+        <li>charCodeAt Method</li>
+        The charCodeAt() method returns the unicode of the character at a given position in a string
+        example:Javascript
+        
+
+        <li>split Method</li>
+        This method splits the string into an array of sub-strings. This method returns an array. 
+        example: Js-java-ruby-c-python can be split by '-' character.
+        <button onclick="strSplit()">Split</button>
+
+    </ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers</title>
+  </head>
+  <body>
+    <h1>Numbers</h1>
+    <h3>Types of Numbers:</h3>
+    <ul>
+      <li>NaN</li>
+      <li>Infinity</li>
+      <li>Hexadecimal</li>
+      <li>Octal</li>
+    </ul>
+    <h3>Number Methods:</h3>
+    <ul>
+      <li>isFinite()</li>
+      It determines whether the given value is a finite number.
+      isFinite(Infinity) will return false as result.
+      <input type="number" id="n1" />
+      <button onclick="x= document.getElementById('n1');">isFinite</button>
+      <li>isInteger()</li>
+      It determines whether the given value is an integer.
+      <li>parseFloat()</li>
+      It converts the given string into a floating point number.
+      <li>parseInt()</li>
+      It converts the given string into an integer number.
+      <li>toExponential()</li>
+      It returns the string that represents exponential notation of the given
+      number.
+      <li>toFixed()</li>
+      It method rounds a number to a given number of digits. example:9.68759
+      <input type="number" id="n1" placeholder="Enter fixed number" />
+      <button onclick="x= document.getElementById('n1');numFixed(x)">Fixed</button>
+      <li>toString()</li>
+      It returns the given number in the form of string.
+      <input type="number" id="n3" placeholder="Enter number" />
+      <button onclick="x= document.getElementById('n3');numString(x)">
+        toString
+      </button>
+    </ul>
+  </body>
+</html>

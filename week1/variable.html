@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var number = 100;
+      varExample(){
+          alert(window.number)
+      }
+      constExample(){
+          const a = 20;
+          alert(a)
+      }
+      letExample(){
+          let b = 12;
+          alert(b)
+
+      }
+    </script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    Variables
+    <div class="variable">
+      <h3>Local Scope Variables</h3>
+      <p>
+        The scope of the variable is in region where it is defined.<br />
+        example: <br />
+        function a(){<br />
+        var x=10; //local<br />
+        document.write(data);<br />
+        }
+      </p>
+
+      <h3>Global ScopeVariables</h3>
+
+      <p>
+        The scope of the variable is in region where it is defined. example: var
+        data = 200 //global function a(){ document.write(data); }
+      </p>
+      It is Declared by:<br />
+      <ol>
+        <li>let</li>
+        const number = 100;
+        //field with number as entry and shows error if we can declar or not with dropdown
+        <button onclick="letExample()">Click here for example</button>
+        <hr />
+        <br>
+        <li>const</li>
+        const number = 100;
+        <button onclick="constExample()">Click here for example</button>
+        <hr />
+        <br>
+        <li>
+          var: var number = 100;
+          <button onclick="varExample()">Click here for example</button>
+        </li>
+      </ol>
+    </div>
+    <div class="datatypes">
+        <h2>Datatypes</h2>
+
+    </div>
+  </body>
+</html>
