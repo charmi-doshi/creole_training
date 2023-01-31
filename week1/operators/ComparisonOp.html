@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="operators.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+  </head>
+  <body>
+    <div class="arithOp">
+      <table>
+        <table>
+          <caption>
+            Comparison Operators
+          </caption>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Name</th>
+              <th>Function</th>
+              <!-- <th>result in true or</th> -->
+            </tr>
+          </thead>
+
+          <tr>
+            <td>==</td>
+            <td>Is equal to</td>
+            <td>
+              <input type="text" id="c1" />
+              <input type="text" id="c2" />
+              <button
+                onclick="let a = document.getElementById('c1').value , b=document.getElementById('c2').value; isEqualTo(a,b)"
+              >
+                isEqualTo
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>===</td>
+            <td>Identical</td>
+            <td>
+              <input type="text" id="c3" />
+              <input type="text" id="c4" />
+              <button
+                onclick=" a = document.getElementById('c3').value , b=document.getElementById('c4').value; Identical(a,b)"
+              >
+                Identical
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>!=</td>
+            <td>Not equal to</td>
+            <td>
+              <input type="text" id="c5" />
+              <input type="text" id="c6" />
+              <button
+                onclick=" a = document.getElementById('c5').value ,b=document.getElementById('c6').value; notEqualTo(a,b)"
+              >
+                notEqualTo
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>!==</td>
+            <td>Not Identical</td>
+            <td>
+              <input type="text" id="c7" />
+              <input type="text" id="c8" />
+              <button
+                onclick=" a = document.getElementById('c7').value ,b=document.getElementById('c8').value; notIdentical(a,b)"
+              >
+                notIdentical
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>></td>
+            <td>Greater than</td>
+            <td>
+              <input type="number" id="c9" />
+              <input type="number" id="c10" />
+              <button
+                onclick=" a = document.getElementById('c9').value ,b=document.getElementById('c10').value; greaterThan(a,b)"
+              >
+                greaterThan
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>>=</td>
+            <td>Greater than or equal to</td>
+            <td>
+              <input type="number" id="c11" />
+              <input type="number" id="c12" />
+              <button
+                onclick=" a = document.getElementById('c11').value ,b=document.getElementById('c12').value; greaterThanEq(a,b)"
+              >
+                greaterThanEq
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt</td>
+            <td>Less than</td>
+            <td>
+              <input type="number" id="c13" />
+              <input type="number" id="c14" />
+              <button
+                onclick=" a = parseInt(document.getElementById('c13').value) , b=parseInt(document.getElementById('c14').value); lesserThan(a,b)"
+              >
+                lesserThan
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt=</td>
+            <td>Less than or equal to</td>
+            <td>
+              <input type="number" id="c15" />
+              <input type="number" id="c16" />
+              <button
+                onclick=" a = parseInt(document.getElementById('c15').value) , b=parseInt(document.getElementById('c16').value);lesserThanEq(a,b)"
+              >
+                lesserThanEq
+              </button>
+            </td>
+          </tr>
+        </table>
+      </table>
+    </div>
+  </body>
+</html>

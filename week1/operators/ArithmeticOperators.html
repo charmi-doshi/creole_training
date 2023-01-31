@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="operators.js"></script>
+    
+      <link rel="stylesheet"  type="text/css" href="style.css"/>
+    
+  </head>
+  <body>
+    <div class="Op">
+      <table>
+        <table>
+          <caption>
+            Arithmetic Operators
+          </caption>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Name</th>
+              <th>Function</th>
+            </tr>
+          </thead>
+
+          <tr>
+            <td>+</td>
+            <td>Addition</td>
+            <td><input type="number" id="t1"/>
+                <input type="number" id="t2"/>
+                <button  onclick=" a = document.getElementById('t1').value , b=document.getElementById('t2').value; add(a,b)">Add </button>
+    
+                </td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>Subtraction</td>
+            <td><input type="number" id="t3"/>
+                <input type="number" id="t4"/>
+                <button  onclick=" a = document.getElementById('t3').value , b=document.getElementById('t4').value; sub(a,b)">Sub</button>
+  
+                </td>
+          </tr>
+          <tr>
+            <td>*</td>
+            <td>Multiplication</td>
+            <td><input type="number" id="t5"/>
+                <input type="number" id="t6"/>
+                <button  onclick=" a = document.getElementById('t5').value ,b=document.getElementById('t6').value; mul(a,b)">Mul</button>
+   
+                </td>
+          </tr>
+          <tr>
+            <td>/</td>
+            <td>Division</td>
+            <td><input type="number" id="t7"/>
+                <input type="number" id="t8"/>
+                <button  onclick=" a = document.getElementById('t7').value ,b=document.getElementById('t8').value; div(a,b)">Div</button>
+   
+                </td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>Modulus</td>
+            <td><input type="number" id="t9"/>
+                <input type="number" id="t10"/>
+                <button  onclick=" a = document.getElementById('t9').value ,b=document.getElementById('t10').value; mod(a,b)">Mod</button>
+   
+                </td>
+          </tr>
+          <tr>
+            <td>**</td>
+            <td>Exponent</td>
+            <td><input type="number" id="t11"/>
+                <input type="number" id="t12"/>
+                <button  onclick=" a = document.getElementById('t11').value ,b=document.getElementById('t12').value; exp(a,b)">Exp</button>
+   
+                </td>
+          </tr>
+          <tr>
+            <td>++</td>
+            <td>Increment</td>
+            <td><input type="number" id="t13"/>
+                <button  onclick=" a = document.getElementById('t13').value ; inc(a)">Increment</button>
+                
+                </td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>Decrement</td>
+            <td><input type="number" id="t14"/>
+                <button  onclick=" a = document.getElementById('t14').value ; dec(a)">Decrement</button>
+                
+                </td>
+          </tr>
+        </table>
+      </table>
+    </div>
+  </body>
+</html>

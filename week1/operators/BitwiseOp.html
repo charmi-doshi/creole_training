@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="operators.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="arithOp">
+      <table>
+        <table>
+          <caption>
+            Bitwise Operators
+          </caption>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Name</th>
+              <th>Function</th>
+              <!-- <th>result in true or</th> -->
+            </tr>
+          </thead>
+
+          <tr>
+            <td>&</td>
+            <td>Bitwise AND</td>
+            <td>
+              a==b & b==c <br /><br />
+              <input type="text" id="b1" />
+              <input type="text" id="b2" />
+              <input type="text" id="b3" />
+              <button
+                onclick=" a = document.getElementById('b1').value, b = document.getElementById('b2').value,c = document.getElementById('b3').value; bitwiseAnd(a,b,c)"
+              >
+                Bit And
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>|</td>
+            <td>Bitwise OR</td>
+            <td>
+              a==b | b==c <br /><br />
+              <input type="text" id="b4" />
+              <input type="text" id="b5" />
+              <input type="text" id="b6" />
+              <button
+                onclick="a = document.getElementById('b4').value,b = document.getElementById('b5').value,c = document.getElementById('b6').value ; bitwiseOr(a,b,c)"
+              >
+                Bit Or
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>^</td>
+            <td>Bitwise XOR</td>
+            <td>
+              a==b ^ b==c <br /><br />
+              <input type="text" id="b7" />
+              <input type="text" id="b8" />
+              <input type="text" id="b9" />
+              <button
+                onclick="let a = document.getElementById('b7').value,b = document.getElementById('b8').value,c = document.getElementById('b9').value; bitwiseXor(a,b,c)"
+              >
+                Bit Xor
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>~</td>
+            <td>Bitwise NOT</td>
+            <td>
+              ~
+              <input type="text" id="b10" />
+              <button
+                onclick=" a = document.getElementById('b10').value; bitwiseNot(a)"
+              >
+                Bit not
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt&lt</td>
+            <td>Bitwise Left Shift</td>
+            <td>
+              <input type="text" id="b11" /> &lt&lt2
+              <button
+                onclick="a = document.getElementById('b11').value; bitwiseLeftShift(a)"
+              >
+                Bit leftshift
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>>></td>
+            <td>Bitwise Right Shift</td>
+            <td>
+              <input type="text" id="b12" /> >> 2
+              <button
+                onclick="a = document.getElementById('b12').value; bitwiseRightShift(a)"
+              >
+                Bit rightshift
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>>>></td>
+            <td>Bitwise Right Shift with Zero</td>
+            <td>
+              <input type="text" id="b13" /> >>>2
+              <button
+                onclick=" a = document.getElementById('b13').value;  bitwiseRightShiftZero(a)"
+              >
+                Bit rightshiftwith zero
+              </button>
+            </td>
+          </tr>
+        </table>
+      </table>
+    </div>
+  </body>
+</html>

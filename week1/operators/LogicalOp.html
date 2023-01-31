@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="operators.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="arithOp">
+      <table>
+        <table>
+          <caption>
+            Logical Operators
+          </caption>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Name</th>
+              <th>Function</th>
+              <!-- <th>result in true or</th> -->
+            </tr>
+          </thead>
+
+          <tr>
+            <td>&&</td>
+            <td>Logical AND</td>
+            <td>
+              a==b && b==c <br /><br />
+              <input type="text" id="l1" />
+              <input type="text" id="l2" />
+              <input type="text" id="l3" />
+              <button  onclick="a = document.getElementById('l1').value, b = document.getElementById('l2').value,c = document.getElementById('l3').value; logicalAnd(a,b,c)">Logical And</button>
+   </td>
+          </tr>
+          <tr>
+            <td>||</td>
+            <td>Logical OR</td>
+            <td>
+              a==b || b==c <br /><br />
+              <input type="text" id="l4" />
+              <input type="text" id="l5" />
+              <input type="text" id="l6" />
+              <button
+                onclick="a = document.getElementById('l4').value,b = document.getElementById('l5').value,c = document.getElementById('l6').value ; logicalOr(a,b,c)"
+              >
+              Logical OR
+              </button>
+            </td>
+          </tr>
+          
+            <td>!</td>
+            <td>Logical NOT</td>
+            <td>
+              ! (
+              <input type="text" id="l7" /> ==
+              <input type="text" id="l8" />) 
+              <button onclick="let a = document.getElementById('l7').value,b = document.getElementById('l8').value; logicalNot(a,b)">Log Not</button>
+            </td>
+          </tr>
+         
+        </table>
+      </table>
+    </div>
+  </body>
+</html>

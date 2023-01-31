@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link 
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+    rel="stylesheet"
+   />
+    <style>
+        .btn{
+            background: #fc7683;
+            padding: 20px;
+            align-items: center;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
+        .dropdown-items{
+            position: absolute;
+            margin-top: 5px;
+            background: #fc7683;
+            padding: 20px;
+            align-items: center;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            display:none;
+            cursor: pointer;
+        }
+        .dropdown-items a{
+            color: #fff;
+            display: flex;
+            padding: 20px;
+            text-decoration: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <button onclick="dropdownChange()"class="btn" id="btn" >
+        Operators
+        <i class="bx bx-chevron-down" id="arrow"></i>
+    </button>
+    <div class="dropdown-items" id="dropdown-items">
+      <a href="ArithmeticOperators.html">
+        <i class="bx bx-plus-circle"></i>
+        Arithmetic-Operators
+      </a>
+      <a href="ComparisonOp.html">
+        <i class="bx bx-book"></i>
+        Comparison Operators
+      </a>
+      <a href="LogicalOp.html">
+          <i class="bx bx-book"></i>
+          Logical Operators
+        </a>
+        <a href="AssignmentOp.html">
+          <i class="bx bx-book"></i>
+          Assignment Operators
+        </a>
+        <a href="BitwiseOp.html">
+          <i class="bx bx-book"></i>
+          Bitwise Operators
+        </a>
+      </div>
+      <script>
+        function dropdownChange(){
+            console.log("change");
+           
+            var toggle = document.getElementById("dropdown-items")
+            
+            if (toggle.style.display == "block") {
+                toggle.style.display = "none";
+            } else {
+                toggle.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

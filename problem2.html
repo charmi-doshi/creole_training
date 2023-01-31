@@ -7,31 +7,22 @@
     <title>Document</title>
     <script>
       function invertedPyramid() {
-        
-        
         for (let i = 9; i > 0; i--) {
-          
-           for(let p=9;p>i;p--){
-            document.write("&nbsp;&nbsp;")
-           }
-          for(let k = 1;k<=i;k++){
-              
-            
-            
-            document.write(k)
-            
-            }
-         
-          for (let j = i-1; j >0; j--) {
+          for (let p = 9; p > i; p--) {
+            document.write("&nbsp;&nbsp;");
+          }
+          for (let k = 1; k <= i; k++) {
+            document.write(k);
+          }
+
+          for (let j = i - 1; j > 0; j--) {
             document.write(j);
           }
-        
+
           document.write("<br>");
-        
         }
-       // document.write(i);
+        // document.write(i);
       }
- 
     </script>
   </head>
   <body>
