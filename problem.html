@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function palindrom(num){
+        //  str = String(num);
+          
+        //   str1 = str.split("")
+        //     rev_str = str1.reverse().join("")
+        //   console.log("palin",str,str1,rev_str)
+        
+        let digit,final_digit=0,temp_digit=0 ;
+        temp_digit = num
+        while(num>0){
+            digit = num % 10;
+            num = parseInt(num/10)
+            final_digit = final_digit *10 + digit 
+        }
+           
+        
+        console.log(digit,final_digit,temp_digit)
+          if(final_digit == temp_digit){
+            document.getElementById('output').innerHTML = "It is a palindrome"
+          }
+          else{
+            document.getElementById('output').innerHTML = "It is not palindrome"
+          }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="input-num"/>
+    <button onclick="num = document.getElementById('input-num').value;palindrom(num)">palindrom</button>
+    <br><label id="output"></label>
+</body>
+</html>

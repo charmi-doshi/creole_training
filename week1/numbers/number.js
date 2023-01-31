@@ -1,31 +1,35 @@
 function numFinite(num) {
   res = Number.isFinite(num);
-  alert("num is finite or not" + res);
+  document.getElementById('output_1').innerHTML = res
+  console.log("num",num,res);
 }
 
 function numInt(num) {
   res = Number.isInteger(num);
-  alert("num is integer or not" + res);
+  console.log(Number.isInteger(num))
+  document.getElementById('output_2').innerHTML = res
 }
 
 function numParseFloat(num1) {
   num = Number.parseFloat(num1);
-  alert("type of number" + typeof num);
+  document.getElementById('output-2').innerHTML = y
 }
 
 function numParseInt(str) {
   str = Number.parseInt(str);
-  alert("type of var:" + typeof str);
+  document.getElementById('output-2').innerHTML = y
 }
 function numExp(num) {
   num = Number.toExponential(num);
-  alert("exponential of number is: " + num);
+  document.getElementById('output_3').innerHTML = num
 }
-function numFixed(p) {
-  y = (9.68759).toFixed(p);
-  alert("fixed number: " + y);
+function numFixed(point) {
+  num = 9.68759.toFixed(point);
+  document.getElementById('output_4').innerHTML = num
+  console.log("num",point,num);
 }
 function numString(n) {
   str = n.toString();
-  alert("number to string: " + typeof str);
+  document.getElementById('output_5').innerHTML = str + " typeof " + typeof str 
+  console.log("num",str);
 }
