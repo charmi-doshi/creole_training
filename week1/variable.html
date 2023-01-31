@@ -4,22 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script>
-      var number = 100;
-      varExample(){
-          alert(window.number)
-      }
-      constExample(){
-          const a = 20;
-          alert(a)
-      }
-      letExample(){
-          let b = 12;
-          alert(b)
-
-      }
-    </script>
+    <title>Variables</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -28,46 +13,78 @@
   <body>
     <h1>Variables</h1>
     <h2>They are Containers for storing data</h2>
+    Example:<br />
+    let a = 10 //number<br />
+    var langauge = "Javascript" //string<br />
     <div class="variable">
       <h3>Local Scope Variables</h3>
       <p>
-        The scope of the variable is in region where it is defined.<br>
-        example: <br>
-        function a(){<br>
-        var x=10; //local<br>
-        document.write(data);<br>
+        The scope of the variable is in region where it is defined.<br /><br />
+        example: <br />
+        function a(){<br />
+        var x=10; //local<br />
+        document.write(data);<br />
         }
       </p>
 
       <h3>Global ScopeVariables</h3>
 
       <p>
-        The variable is accessible from any function.
-        example: var data = 200 //global <br>
-        function a(){ <br>document.write(data);<br> }
+        The variable is accessible from any function. <br /><br />
+        example:<br />
+        var data = 200//global <br />
+        function a(){ <br />document.write(data);<br />
+        }
       </p>
       <h3>Types of Variable Declaration:-</h3>
       <ol>
-        <li>let</li>
-        const number = 100;
-        
-        <button onclick="letExample()">Click here for example</button>
+        <li><h4>var</h4></li>
+        <ul>
+          <li>It can be reassigned and redeclared</li>
+        </ul>
+        <br />
+        Example:<br />
+        var greet = "say Hi"
+        <br />
+        var n=4
+        <br />
+        if(v>1){<br />
+        var greet = "say Hello instead"
+        <br />
+        }<br />
+        document.write(greet) // output will be say Hello instead
         <hr />
-        <br>
-        <li>const</li>
-        const number = 100;
-        <button onclick="constExample()">Click here for example</button>
-        <hr />
-        <br>
-        <li>
-          var: var number = 100;
-          <button onclick="varExample()">Click here for example</button>
-        </li>
-      </ol>
-    </div>
-    <div class="datatypes">
-        <h2>Datatypes</h2>
+        <br />
+        <li><h4>let</h4></li>
+        <ul>
+          <li>It must be declared before use</li>
+          <li>It uses block scope</li>
+          <li>It can be reassigned but not redeclared</li>
+        </ul>
+        <br />
+        Example:<br />
+        let number = 100;
+        <br />
+        { let number = 10 //it is valid<br />
+        let number = 100//GIVES AN ERROR
+        <br />
+        }
 
+        <hr />
+        <br />
+        <li><h4>const</h4></li>
+
+        <ul>
+          <li>It cannot be redeclared or reassigned</li>
+          <li>It uses block scope</li>
+        </ul>
+        <br />
+        Example:<br />
+        const PI = 3.14;<br />
+        PI=3.144 //GIVES AN ERROR<br />
+        <hr />
+        <br />
+      </ol>
     </div>
   </body>
 </html>
