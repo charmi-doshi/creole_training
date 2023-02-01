@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array</title>
     <script src="arrays.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
     <h1>Array</h1>
@@ -72,6 +73,28 @@
        
         <button onclick="arrSlice()">Slice</button>
         <label id="output--8"></label>  
+        <li>Sort</li>
+        sorts elements in array. 
+        Example:["mango","watermelon","apple"]
+        <button onclick="arrSort()">Sort</button>
+        <label id="output--9"></label>
+        <li>Map</li>
+         It creates a new array from calling a function for every array element.
+         Example:
+         let users =[<br>
+            {firstName : "abc" , lastName:"def"},<br>
+            {firstName:"xyz",lastName:"qrt"}<br>
+            ]<br>
+            We will map this into usernames
+        <button onclick="arrMap()">Map</button>
+        <label id="output--10"></label>
+        <li>Filter</li>
+        This method creates a new array filled with elements that pass a test provided by a function.<br>
+        Example:age = [21,13,37,32,22]<br>
+        We filter the ages that can vote:<br>
+        <button onclick="arrFilter()">Filter</button>
+        <label id="output--11"></label>
+       
     </ul>
 
 </body>

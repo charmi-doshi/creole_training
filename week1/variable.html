@@ -9,6 +9,29 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script>
+      function greet() {
+        var greet = "say Hi";
+        var n = 4;
+        if (n > 1) {
+          var greet = "say Hello instead";
+        }
+        document.getElementById('greet-output').innerHTML = greet
+        console.log(greet)
+      }
+      function num(){
+        let str = document.getElementById('input').value
+        if(str == "number"){
+          document.getElementById('output').innerHTML = "error as number already declared"
+        }
+        else{
+          document.getElementById('output').innerHTML = "variable assigned successfully"
+        }
+        
+
+      }
+  
+    </script>
   </head>
   <body>
     <h1>Variables</h1>
@@ -25,6 +48,7 @@
         var x=10; //local<br />
         document.write(data);<br />
         }
+        
       </p>
 
       <h3>Global ScopeVariables</h3>
@@ -36,6 +60,7 @@
         function a(){ <br />document.write(data);<br />
         }
       </p>
+   
       <h3>Types of Variable Declaration:-</h3>
       <ol>
         <li><h4>var</h4></li>
@@ -48,11 +73,16 @@
         <br />
         var n=4
         <br />
-        if(v>1){<br />
+        if(n>1){<br />
         var greet = "say Hello instead"
         <br />
         }<br />
-        document.write(greet) // output will be say Hello instead
+
+        <button onclick="greet()">
+          Click here to see which value is stored in greet
+        </button>
+        <label id="greet-output" style="color:blue"></label>
+
         <hr />
         <br />
         <li><h4>let</h4></li>
@@ -66,10 +96,15 @@
         let number = 100;
         <br />
         { let number = 10 //it is valid<br />
-        let number = 100//GIVES AN ERROR
+        let <input type="text" id="input" placeholder="Enter variable name"> = 100<br /><br>
+        <button onclick="num()">
+          Click here!
+        </button>
+        <label id="output" style="color:red"></label><br><br>
+        //GIVES AN ERROR if you enter number
         <br />
         }
-
+        
         <hr />
         <br />
         <li><h4>const</h4></li>

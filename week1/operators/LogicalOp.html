@@ -11,57 +11,53 @@
   <body>
     <div class="arithOp">
       <table>
-        <table>
-          <caption>
-            Logical Operators
-          </caption>
-          <thead>
-            <tr>
-              <th>Operator</th>
-              <th>Name</th>
-              <th>Function</th>
-              <!-- <th>result in true or</th> -->
-            </tr>
-          </thead>
+        <caption>
+          Logical Operators
+        </caption>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Function</th>
+            <!-- <th>result in true or</th> -->
+          </tr>
+        </thead>
 
-          <tr>
-            <td>&&</td>
-            <td>Logical AND</td>
-            <td>
-              a==b && b==c <br /><br />
-              <input type="text" id="l1" />
-              <input type="text" id="l2" />
-              <input type="text" id="l3" />
-              <button  onclick="a = document.getElementById('l1').value, b = document.getElementById('l2').value,c = document.getElementById('l3').value; logicalAnd(a,b,c)">Logical And</button>
-   </td>
-          </tr>
-          <tr>
-            <td>||</td>
-            <td>Logical OR</td>
-            <td>
-              a==b || b==c <br /><br />
-              <input type="text" id="l4" />
-              <input type="text" id="l5" />
-              <input type="text" id="l6" />
-              <button
-                onclick="a = document.getElementById('l4').value,b = document.getElementById('l5').value,c = document.getElementById('l6').value ; logicalOr(a,b,c)"
-              >
-              Logical OR
-              </button>
-            </td>
-          </tr>
-          
-            <td>!</td>
-            <td>Logical NOT</td>
-            <td>
-              ! (
-              <input type="text" id="l7" /> ==
-              <input type="text" id="l8" />) 
-              <button onclick="let a = document.getElementById('l7').value,b = document.getElementById('l8').value; logicalNot(a,b)">Log Not</button>
-            </td>
-          </tr>
-         
-        </table>
+        <tr>
+          <td>&&</td>
+          <td>Logical AND</td>
+          <td>
+            a==b && b==c <br /><br />
+            <input type="text" id="logic-input-1" />
+            <input type="text" id="logic-input-2" />
+            <input type="text" id="logic-input-3" />
+            <button onclick=" logicalAnd()">Logical And</button>
+            <label id="logic-output-1"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>||</td>
+          <td>Logical OR</td>
+          <td>
+            a==b || b==c <br /><br />
+            <input type="text" id="logic-input-4" />
+            <input type="text" id="logic-input-5" />
+            <input type="text" id="logic-input-6" />
+            <button onclick="logicalOr()">Logical OR</button>
+            <label id="logic-output-2"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>!</td>
+          <td>Logical NOT</td>
+          <td>
+            ! (
+            <input type="text" id="logic-input-7" /> ==
+            <input type="text" id="logic-input-8" />)
+            <button onclick="logicalNot()">Log Not</button>
+            <label id="logic-output-1"></label>
+          </td>
+        </tr>
       </table>
     </div>
   </body>

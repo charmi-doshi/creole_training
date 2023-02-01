@@ -3,31 +3,33 @@ const fruits = ["mango","watermelon","apple"]
 const vegetables = ["carrot","cucumber","cabbage"]
 const color = ["blue","green","red"]
 const flowers = ["rose","lily","tulip","lotus","sunflower"]
+const age =  [21,13,37,32,22]
 
-function display(){
-    forEa
-}
 function arrLength(){
      length = arr.length
      document.getElementById('output--1').innerHTML = length;
 }
 function arrPush(str){
-    arr.push(str)
-    document.getElementById('output--2').innerHTML = arr;
+    let arr1 = arr
+    arr1.push(str)
+    document.getElementById('output--2').innerHTML = arr1;
     console.log(arr)
 }
 function arrUnshift(str){
-    arr.unshift(str)
-    document.getElementById('output--3').innerHTML = arr;
+    let arr2 = arr
+    arr2.unshift(str)
+    document.getElementById('output--3').innerHTML = arr2;
     console.log(arr)
 }
 function arrPop(){
-    arr.pop()
-    document.getElementById('output--4').innerHTML = arr;
+    arr1 = arr
+    arr1.pop()
+    document.getElementById('output--4').innerHTML = arr1;
 }
 function arrShift(){
-    arr.shift()
-    document.getElementById('output--5').innerHTML = arr;
+    arr1 = arr
+    arr1.shift()
+    document.getElementById('output--5').innerHTML = arr1;
     console.log(arr)
 }
 
@@ -59,4 +61,32 @@ function arrSlice(){
     let res = flowers.slice(start,end)
     document.getElementById('output--8').innerHTML = "elements: " + res;
     console.log(res,flowers)
+}
+function arrSort(){
+    
+    fruits.sort()
+    document.getElementById('output--9').innerHTML = "elements: " + fruits;
+    console.log(fruits)
+}
+function arrMap(){
+    let users =[
+        {firstName : "abc" , lastName:"def"},
+        {firstName:"xyz",lastName:"qrt"}
+    ]
+
+    let userNames  = users.map(function(element){
+        return `${element.firstName} ${element.lastName}`
+    })
+    document.getElementById('output--10').innerHTML = "usernames: " + userNames ;
+    console.log(userNames)
+}
+function arrFilter(){
+    let res = age.filter(canVote)
+    function canVote(age){
+        if (age >=18){
+            return age
+        }
+    }
+    document.getElementById('output--11').innerHTML = "These can vote: " + res;
+    console.log(res)
 }

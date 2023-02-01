@@ -1,0 +1,32 @@
+.arithOp {
+    padding: 20px;
+  }
+  label{
+    color:palevioletred
+  }
+  table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: medium;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  caption {
+    padding: 12px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #000;
+    color: #ffffff;
+  }
+  thead {
+    background-color: #26a5cc;
+    color: #ffffff;
+  }
+  th,
+  tr,td {
+    padding: 12px;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }

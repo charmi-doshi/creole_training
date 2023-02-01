@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <style>
+      #variable {
+        width: 100%;
+        height: 1000px;
+        scroll-behavior: smooth;
+        /* background-color: aqua; */
+      }
+      .variableDiv {
+        display: none;
+      }
+    </style>
+    <script>
+      function showBlock(divName) {
+        var variable = document.getElementById(divName);
+        console.log("var");
+        if (variable.style.display === "none") {
+          variable.style.display = "block";
+        } else {
+          variable.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="name = 'variableDiv';showBlock(name)">var</button>
+    <div id="variableDiv">
+      <iframe id="variable" src="variable.html"></iframe>
+    </div>
+  </body>
+</html>
