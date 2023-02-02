@@ -27,19 +27,19 @@ function div() {
   result = a / b;
   document.getElementById("arith-output-4").innerHTML = "div result= " + result;
 }
-function exp() {
+function mod() {
   a = document.getElementById("arith-input-9").value;
   b = document.getElementById("arith-input-10").value;
-  result = a ** b;
+  result = a % b;
   document.getElementById("arith-output-5").innerHTML =
-    "exponential result= " + result;
+    "Mod result= " + result;
 }
-function mod() {
+function exp() {
   a = document.getElementById("arith-input-11").value;
   b = document.getElementById("arith-input-12").value;
-  result = b % a;
+  result = a ** b;
   document.getElementById("arith-output-6").innerHTML = "mod result= " + result;
-  console.log("mod result= " + result);
+  console.log("exponential result= " + result);
 }
 function inc() {
   a = document.getElementById("arith-input-13").value;
@@ -92,7 +92,7 @@ function notIdentical() {
   }
   document.getElementById("comp-output-4").innerHTML =
     "notIdentical result= " + res;
-  window.location.reload();
+ 
 }
 function greaterThan() {
   a = document.getElementById("comp-input-9").value;
@@ -102,7 +102,7 @@ function greaterThan() {
   }
   document.getElementById("comp-output-5").innerHTML =
     "greaterThan result= " + res;
-  window.location.reload();
+
 }
 function greaterThanEq() {
   a = document.getElementById("comp-input-11").value;
@@ -112,29 +112,29 @@ function greaterThanEq() {
   }
   document.getElementById("comp-output-6").innerHTML =
     "graterThanto result= " + res;
-  window.location.reload();
+
 }
 function lesserThan() {
-  a = document.getElementById("comp-input-13").value;
-  b = document.getElementById("comp-input-14").value;
+  a = Number(document.getElementById("comp-input-13").value);
+  b = Number(document.getElementById("comp-input-14").value);
   if (a < b) {
     res = true;
   }
   console.log(a, b);
   document.getElementById("comp-output-7").innerHTML =
     "leeserThan result= " + res;
-  window.location.reload();
+
 }
 function lesserThanEq() {
-  a = document.getElementById("comp-input-15").value;
-  b = document.getElementById("comp-input-16").value;
+  a = Number(document.getElementById("comp-input-15").value);
+  b = Number(document.getElementById("comp-input-16").value);
   if (a <= b) {
     res = true;
   }
   console.log(a, b);
-  document.getElementById("comp-output-7").innerHTML =
+  document.getElementById("comp-output-8").innerHTML =
     "lesserThanEqual result= " + res;
-  window.location.reload();
+  
 }
 
 //bitwise
@@ -149,7 +149,7 @@ function bitwiseAnd() {
   }
   document.getElementById("bit-output-1").innerHTML =
     "bitwiseAnd result= " + ans;
-  window.location.reload();
+  
 }
 function bitwiseOr() {
   a = document.getElementById("bit-input-4").value;
@@ -161,7 +161,7 @@ function bitwiseOr() {
   console.log("bitor", a, b, c, ans);
   document.getElementById("bit-output-2").innerHTML =
     "bitwiseOr result= " + ans;
-  window.location.reload();
+  
 }
 function bitwiseXor() {
   a = document.getElementById("bit-input-7").value;
@@ -173,7 +173,7 @@ function bitwiseXor() {
   console.log("bitxor", ans);
   document.getElementById("bit-output-3").innerHTML =
     "bitwiseXor result= " + ans;
-  window.location.reload();
+  
 }
 let answer;
 function bitwiseNot() {
@@ -182,31 +182,31 @@ function bitwiseNot() {
   console.log(answer);
   document.getElementById("bit-output-4").innerHTML =
     "bitwiseNot result= " + answer;
-  window.location.reload();
+ 
 }
 function bitwiseLeftShift() {
   a = document.getElementById("bit-input-11").value;
-  answer = a << 1;
+  answer = a << 2;
   console.log("bit-lfshift", a, " ", answer);
   document.getElementById("bit-output-5").innerHTML =
     "bitwiseLeftShift result= " + answer;
-  window.location.reload();
+ 
 }
 function bitwiseRightShift() {
   a = document.getElementById("bit-input-12").value;
-  answer = a >> 1;
+  answer = a >> 2;
   console.log("bit-lfshift", a, " ", answer);
   document.getElementById("bit-output-6").innerHTML =
     "bitwiseRightShift result= " + answer;
-  window.location.reload();
+  
 }
 function bitwiseRightShiftZero() {
   a = document.getElementById("bit-input-13").value;
-  answer = a >>> 1;
+  answer = a >>> 2;
   console.log("bit-lfshift-w/zero", a, " ", answer);
   document.getElementById("bit-output-7").innerHTML =
     "bitwiseRightShiftZero result= " + answer;
-  window.location.reload();
+
 }
 
 //logical operators
@@ -220,7 +220,7 @@ function logicalAnd() {
   }
   console.log(ans);
   document.getElementById("logic-output-1").innerHTML = "And result= " + ans;
-  window.location.reload();
+  
 }
 function logicalOr() {
   a = document.getElementById("logic-input-4").value;
@@ -231,7 +231,7 @@ function logicalOr() {
   }
   console.log(ans);
   document.getElementById("logic-output-2").innerHTML = "OR result= " + ans;
-  window.location.reload();
+ 
 }
 function logicalNot(a, b) {
   a = document.getElementById("logic-input-7").value;
@@ -241,7 +241,7 @@ function logicalNot(a, b) {
   }
   console.log(ans);
   document.getElementById("logic-output-3").innerHTML = "NOT result= " + ans;
-  window.location.reload();
+  
 }
 
 //assignOp(x)
@@ -261,18 +261,18 @@ function subAssign(x) {
 }
 function mulAssign(x) {
   x = document.getElementById("as-input-3").value;
-  res *= x;
-  document.getElementById("as-output-3").innerHTML = "mul-assign" + res;
-  console.log("mul-assign", res, x);
+  
+  x *= 3;
+  document.getElementById("as-output-3").innerHTML = "mul-assign" + x;
+  console.log("mul-assign",x);
 }
-function divAssign(x, y) {
-  x = document.getElementById("as-input-4").value;
-  // y = document.getElementById("as-input-5").value
-  res /= x;
-  document.getElementById("as-output-4").innerHTML = "div-assign" + res;
-  console.log("div-assign", res, typeof x);
+function divAssign() {
+  x = Number(document.getElementById("as-input-4").value);
+  x /= 2;
+  document.getElementById("as-output-4").innerHTML = "div-assign" + x;
+  console.log("div-assign", x);
 }
-function modAssign(x, y) {
+function modAssign() {
   x = document.getElementById("as-input-5").value;
 
   res %= x;

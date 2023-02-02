@@ -7,7 +7,6 @@
     <title>Document</title>
     <script type="text/javascript" src="operators.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    
   </head>
   <body>
     <div class="arithOp">
@@ -21,7 +20,6 @@
               <th>Operator</th>
               <th>Name</th>
               <th>Function</th>
-              <!-- <th>result in true or</th> -->
             </tr>
           </thead>
 
@@ -29,104 +27,80 @@
             <td>==</td>
             <td>Is equal to</td>
             <td>
-              <input type="text" id="c1" />
-              <input type="text" id="c2" />
-              <button
-                onclick="let a = document.getElementById('c1').value , b=document.getElementById('c2').value; isEqualTo(a,b)"
-              >
-                isEqualTo
-              </button>
+              <input type="text" id="comp-input-1" />
+              <input type="text" id="comp-input-2" />
+              <button onclick="isEqualTo()">isEqualTo</button>
+              <label id="comp-output-1"></label>
             </td>
           </tr>
           <tr>
             <td>===</td>
             <td>Identical</td>
             <td>
-              <input type="text" id="c3" />
-              <input type="text" id="c4" />
-              <button
-                onclick=" a = document.getElementById('c3').value , b=document.getElementById('c4').value; Identical(a,b)"
-              >
-                Identical
-              </button>
+              <input type="text" id="comp-input-3" />
+              <input type="text" id="comp-input-4" />
+              <button onclick="Identical()">Identical</button>
+              <label id="comp-output-2"></label>
             </td>
           </tr>
           <tr>
             <td>!=</td>
             <td>Not equal to</td>
             <td>
-              <input type="text" id="c5" />
-              <input type="text" id="c6" />
-              <button
-                onclick=" a = document.getElementById('c5').value ,b=document.getElementById('c6').value; notEqualTo(a,b)"
-              >
-                notEqualTo
-              </button>
+              <input type="text" id="comp-input-5" />
+              <input type="text" id="comp-input-6" />
+              <button onclick="notEqualTo()">notEqualTo</button>
+              <label id="comp-output-3"></label>
             </td>
           </tr>
           <tr>
             <td>!==</td>
             <td>Not Identical</td>
             <td>
-              <input type="text" id="c7" />
-              <input type="text" id="c8" />
-              <button
-                onclick=" a = document.getElementById('c7').value ,b=document.getElementById('c8').value; notIdentical(a,b)"
-              >
-                notIdentical
-              </button>
+              <input type="text" id="comp-input-7" />
+              <input type="text" id="comp-input-8" />
+              <button onclick=" notIdentical()">notIdentical</button>
+              <label id="comp-output-4"></label>
             </td>
           </tr>
           <tr>
             <td>></td>
             <td>Greater than</td>
             <td>
-              <input type="number" id="c9" />
-              <input type="number" id="c10" />
-              <button
-                onclick=" a = document.getElementById('c9').value ,b=document.getElementById('c10').value; greaterThan(a,b)"
-              >
-                greaterThan
-              </button>
+              <input type="number" id="comp-input-9" />
+              <input type="number" id="comp-input-10" />
+              <button onclick="greaterThan()">greaterThan</button>
+              <label id="comp-output-5"></label>
             </td>
           </tr>
           <tr>
             <td>>=</td>
             <td>Greater than or equal to</td>
             <td>
-              <input type="number" id="c11" />
-              <input type="number" id="c12" />
-              <button
-                onclick=" a = document.getElementById('c11').value ,b=document.getElementById('c12').value; greaterThanEq(a,b)"
-              >
-                greaterThanEq
-              </button>
+              <input type="number" id="comp-input-11" />
+              <input type="number" id="comp-input-12" />
+              <button onclick="greaterThanEq()">greaterThanEq</button>
+              <label id="comp-output-6"></label>
             </td>
           </tr>
           <tr>
             <td>&lt</td>
             <td>Less than</td>
             <td>
-              <input type="number" id="c13" />
-              <input type="number" id="c14" />
-              <button
-                onclick=" a = parseInt(document.getElementById('c13').value) , b=parseInt(document.getElementById('c14').value); lesserThan(a,b)"
-              >
-                lesserThan
-              </button>
+              <input type="number" id="comp-input-13" />
+              <input type="number" id="comp-input-14" />
+              <button onclick="lesserThan()">lesserThan</button>
+              <label id="comp-output-7"></label>
             </td>
           </tr>
           <tr>
             <td>&lt=</td>
             <td>Less than or equal to</td>
             <td>
-              <input type="number" id="c15" />
-              <input type="number" id="c16" />
-              <button
-                onclick=" a = parseInt(document.getElementById('c15').value) , b=parseInt(document.getElementById('c16').value);lesserThanEq(a,b)"
-              >
-                lesserThanEq
-              </button>
+              <input type="number" id="comp-input-15" />
+              <input type="number" id="comp-input-16" />
+              <button onclick="lesserThanEq()">lesserThanEq</button>
+              <label id="comp-output-8"></label>
             </td>
           </tr>
         </table>

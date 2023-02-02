@@ -9,6 +9,7 @@
     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
     rel="stylesheet"
    />
+   <link rel="stylesheet" type="text/css" href="style.css" />
     <style>
         .btn{
             background: #fc7683;
@@ -38,8 +39,20 @@
             padding: 20px;
             text-decoration: none;
         }
+        
     </style>
-    
+    <script>
+      function showBlock(divName) {
+       
+        var variable = document.getElementById(divName);
+        console.log("var",divName);
+        if (variable.style.display === "none") {
+          variable.style.display = "block";
+        } else {
+          variable.style.display = "none";
+        }
+      }
+    </script>
 </head>
 <body>
     <button onclick="dropdownChange()"class="btn" id="btn" >
@@ -47,26 +60,41 @@
         <i class="bx bx-chevron-down" id="arrow"></i>
     </button>
     <div class="dropdown-items" id="dropdown-items">
-      <a href="ArithmeticOperators.html">
+      <a onclick="showBlock('ArithBlock')">
         <i class="bx bx-plus-circle"></i>
         Arithmetic-Operators
       </a>
-      <a href="ComparisonOp.html">
+      <a onclick="showBlock('CompBlock')">
         <i class="bx bx-book"></i>
         Comparison Operators
       </a>
-      <a href="LogicalOp.html">
+      <a onclick="showBlock('LogBlock')">
           <i class="bx bx-book"></i>
           Logical Operators
         </a>
-        <a href="AssignmentOp.html">
+        <a onclick="showBlock('AssignBlock')">
           <i class="bx bx-book"></i>
           Assignment Operators
         </a>
-        <a href="BitwiseOp.html">
+        <a onclick="showBlock('BitwiseBlock')">
           <i class="bx bx-book"></i>
           Bitwise Operators
         </a>
+      </div>
+      <div id="ArithBlock">
+        <iframe class="arith" src="ArithmeticOperators.html"></iframe>
+      </div>
+      <div id="CompBlock">
+        <iframe class="comp" src="ComparisonOp.html"></iframe>
+      </div>
+      <div id="LogBlock">
+        <iframe class="logical" src="LogicalOp.html"></iframe>
+      </div>
+      <div id="AssignBlock">
+        <iframe class="assign" src="AssignmentOp.html"></iframe>
+      </div>
+      <div id="BitwiseBlock">
+        <iframe class="bitwise" src="BitwiseOp.html"></iframe>
       </div>
       <script>
         function dropdownChange(){

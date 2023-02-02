@@ -20,7 +20,6 @@
               <th>Operator</th>
               <th>Name</th>
               <th>Function</th>
-              <!-- <th>result in true or</th> -->
             </tr>
           </thead>
 
@@ -29,14 +28,11 @@
             <td>Bitwise AND</td>
             <td>
               a==b & b==c <br /><br />
-              <input type="text" id="b1" />
-              <input type="text" id="b2" />
-              <input type="text" id="b3" />
-              <button
-                onclick=" a = document.getElementById('b1').value, b = document.getElementById('b2').value,c = document.getElementById('b3').value; bitwiseAnd(a,b,c)"
-              >
-                Bit And
-              </button>
+              <input type="text" id="bit-input-1" />
+              <input type="text" id="bit-input-2" />
+              <input type="text" id="bit-input-3" />
+              <button onclick=" bitwiseAnd()">Bit And</button>
+              <label id="bit-output-1"></label>
             </td>
           </tr>
           <tr>
@@ -44,14 +40,11 @@
             <td>Bitwise OR</td>
             <td>
               a==b | b==c <br /><br />
-              <input type="text" id="b4" />
-              <input type="text" id="b5" />
-              <input type="text" id="b6" />
-              <button
-                onclick="a = document.getElementById('b4').value,b = document.getElementById('b5').value,c = document.getElementById('b6').value ; bitwiseOr(a,b,c)"
-              >
-                Bit Or
-              </button>
+              <input type="text" id="bit-input-4" />
+              <input type="text" id="bit-input-5" />
+              <input type="text" id="bit-input-6" />
+              <button onclick="bitwiseOr()">Bit Or</button>
+              <label id="bit-output-2"></label>
             </td>
           </tr>
           <tr>
@@ -59,14 +52,11 @@
             <td>Bitwise XOR</td>
             <td>
               a==b ^ b==c <br /><br />
-              <input type="text" id="b7" />
-              <input type="text" id="b8" />
-              <input type="text" id="b9" />
-              <button
-                onclick="let a = document.getElementById('b7').value,b = document.getElementById('b8').value,c = document.getElementById('b9').value; bitwiseXor(a,b,c)"
-              >
-                Bit Xor
-              </button>
+              <input type="text" id="bit-input-7" />
+              <input type="text" id="bit-input-8" />
+              <input type="text" id="bit-input-9" />
+              <button onclick="bitwiseXor()">Bit Xor</button>
+              <label id="bit-output-3"></label>
             </td>
           </tr>
           <tr>
@@ -74,48 +64,38 @@
             <td>Bitwise NOT</td>
             <td>
               ~
-              <input type="text" id="b10" />
-              <button
-                onclick=" a = document.getElementById('b10').value; bitwiseNot(a)"
-              >
-                Bit not
-              </button>
+              <input type="text" id="bit-input-10" />
+              <button onclick="bitwiseNot()">Bit not</button>
+              <label id="bit-output-4"></label>
             </td>
           </tr>
           <tr>
             <td>&lt&lt</td>
             <td>Bitwise Left Shift</td>
             <td>
-              <input type="text" id="b11" /> &lt&lt2
-              <button
-                onclick="a = document.getElementById('b11').value; bitwiseLeftShift(a)"
-              >
-                Bit leftshift
-              </button>
+              <input type="text" id="bit-input-11" /> &lt&lt2
+              <button onclick="bitwiseLeftShift()">Bit leftshift</button>
+              <label id="bit-output-5"></label>
             </td>
           </tr>
           <tr>
             <td>>></td>
             <td>Bitwise Right Shift</td>
             <td>
-              <input type="text" id="b12" /> >> 2
-              <button
-                onclick="a = document.getElementById('b12').value; bitwiseRightShift(a)"
-              >
-                Bit rightshift
-              </button>
+              <input type="text" id="bit-input-12" /> >> 2
+              <button onclick="bitwiseRightShift()">Bit rightshift</button>
+              <label id="bit-output-6"></label>
             </td>
           </tr>
           <tr>
             <td>>>></td>
             <td>Bitwise Right Shift with Zero</td>
             <td>
-              <input type="text" id="b13" /> >>>2
-              <button
-                onclick=" a = document.getElementById('b13').value;  bitwiseRightShiftZero(a)"
-              >
+              <input type="text" id="bit-input-13" /> >>>2
+              <button onclick="bitwiseRightShiftZero()">
                 Bit rightshiftwith zero
               </button>
+              <label id="bit-output-7"></label>
             </td>
           </tr>
         </table>

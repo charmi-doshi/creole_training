@@ -14,128 +14,212 @@
       Array enables storing a collection of multiple items under a single
       variable name, and has members for performing common array operations.
     </h3>
-    <h3>Array Methods</h3>
-    <ul>
-      <li>length method</li>
-      gives the length of the array.The length will always be one more than the
-      higher index element of array.
-      Example:["Lambhorghini","Porsche","Supra","Bugatti"]
-      <button onclick="arrLength()">length of the array</button>
-      <label id="output--1"></label>
-      <br />
-      <li>adding elements</li>
-      <li>push()</li>
-      it inserts the element at the end of the array
-      <input
-        type="text"
-        id="input-arr"
-        placeholder="Enter element to be inserted"
-      />
-      <button
-        onclick="str= document.getElementById('input-arr').value;arrPush(str)"
-      >
-        Push
-      </button>
-      <label id="output--2"></label>
-      <li>unshift()</li>
-      it inserts the element at the start of the array
-      <input
-        type="text"
-        id="input-arr-1"
-        placeholder="Enter element to be inserted"
-      />
-      <button
-        onclick="str= document.getElementById('input-arr-1').value;arrUnshift(str)"
-      >
-        Unshift
-      </button>
-      <label id="output--3"></label>
-      <li>Pop</li>
-      Example:["Lambhorghini","Porsche","Supra","Bugatti"]
-      <button onclick="arrPop()">Pop</button>
-      <label id="output--4"></label>
-      <li>Shift</li>
-      Removes elements from first index and shift others.
-      Example:["Lambhorghini","Porsche","Supra","Bugatti"]
-      <button onclick="arrShift()">Shift</button>
-      <label id="output--5"></label>
-      <li>Concat two or more arrays</li>
-      Example:
-      <br />
-      const fruits = ["mango","watermelon","apple"]<br />
-      const vegetables = ["carrot","cucumber","cabbage"]<br />
-      const color = ["blue","green","red"]<br />
-      Now lets merge these arrays<br />
-      fruits.concat(vegetables,color)
-      <button
-        onclick="arr1= document.getElementById('input-arr-2').value;arr2= document.getElementById('input-arr-3').value;fruitConcat(arr1,arr2)"
-      >
-        Concat
-      </button>
-      <br />OR
-      <input
-        type="text"
-        id="input-arr-2"
-        placeholder="Enter string to concat"
-      />,
-      <input
-        type="text"
-        id="input-arr-3"
-        placeholder="Enter string to concat"
-      />
-      <button
-        onclick="arr1= document.getElementById('input-arr-2').value;arr2= document.getElementById('input-arr-3').value;arrConcat(arr1,arr2)"
-      >
-        Concat
-      </button>
-      <label id="output--6"></label>
-      <li>Splice Method</li>
-      The splice() method adds new items to an array. Example :<br />
-      const flowers = ["rose","lily","tulip","lotus","sunflower"]<br />
-      Lets splice this array:<br />
-      <input type="text" id="input-num--2" placeholder="Enter start index" />,
-      <input
-        type="text"
-        id="input-num--3"
-        placeholder="Enter num of elements to remove"
-      />
-      <input
-        type="text"
-        id="input-txt--2"
-        placeholder="Enter element to add"
-      />,
-      <input type="text" id="input-txt--3" placeholder="Enter element to add" />
-      <button onclick="arrSplice()">Splice</button>
-      <label id="output--7"></label>
-      <li>Slice Method</li>
-      The slice() method slices out a piece of an array. Example :<br />
-      const flowers = ["rose","lily","tulip","lotus","sunflower"]<br />
-      Lets slice this array:<br />
-      <input type="number" id="input-num--4" placeholder="Enter start index" />,
-      <input type="number" id="input-num--5" placeholder="Enter end index" />
+    <div class="arithOp">
+      <table>
+        <caption>
+          Array Methods
+        </caption>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Function</th>
+            <!-- <th>result in true or</th> -->
+          </tr>
+        </thead>
 
-      <button onclick="arrSlice()">Slice</button>
-      <label id="output--8"></label>
-      <li>Sort</li>
-      sorts elements in array. Example:["mango","watermelon","apple"]
-      <button onclick="arrSort()">Sort</button>
-      <label id="output--9"></label>
-      <li>Map</li>
-      It creates a new array from calling a function for every array element.
-      Example: let users =[<br />
-      {firstName : "abc" , lastName:"def"},<br />
-      {firstName:"xyz",lastName:"qrt"}<br />
-      ]<br />
-      We will map this into usernames
-      <button onclick="arrMap()">Map</button>
-      <label id="output--10"></label>
-      <li>Filter</li>
-      This method creates a new array filled with elements that pass a test
-      provided by a function.<br />
-      Example:age = [21,13,37,32,22]<br />
-      We filter the ages that can vote:<br />
-      <button onclick="arrFilter()">Filter</button>
-      <label id="output--11"></label>
-    </ul>
+        <tr>
+          <td>length method</td>
+          <td>
+            gives the length of the array.The length will always be one more
+            than the higher index element of array.
+          </td>
+          <td>
+            Example:["Lambhorghini","Porsche","Supra","Bugatti"]
+            <button onclick="arrLength()">length of the array</button>
+            <label id="output--1"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>push()</td>
+          <td>it inserts the element at the end of the array</td>
+          <td>
+            <input
+              type="text"
+              id="input-arr"
+              placeholder="Enter element to be inserted"
+            />
+            <button
+              onclick="str= document.getElementById('input-arr').value;arrPush(str)"
+            >
+              Push
+            </button>
+            <label id="output--2"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>unshift()</td>
+          <td>it inserts the element at the start of the array</td>
+          <td>
+            <input
+              type="text"
+              id="input-arr-1"
+              placeholder="Enter element to be inserted"
+            />
+            <button
+              onclick="str= document.getElementById('input-arr-1').value;arrUnshift(str)"
+            >
+              Unshift
+            </button>
+            <label id="output--3"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Pop</td>
+          <td>It removes the element from the end</td>
+          <td>
+            Example:["Lambhorghini","Porsche","Supra","Bugatti"]
+            <button onclick="arrPop()">Pop</button>
+            <label id="output--4"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Shift</td>
+          <td>Removes elements from first index and shift others.</td>
+          <td>
+            Example:["Lambhorghini","Porsche","Supra","Bugatti"]
+            <button onclick="arrShift()">Shift</button>
+            <label id="output--5"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Concat</td>
+          <td>Concat two or more arrays</td>
+          <td>
+            Example:
+            <br />
+            const fruits = ["mango","watermelon","apple"]<br />
+            const vegetables = ["carrot","cucumber","cabbage"]<br />
+            const color = ["blue","green","red"]<br />
+            Now lets merge these arrays<br />
+            fruits.concat(vegetables,color)
+            <button
+              onclick="arr1= document.getElementById('input-arr-2').value;arr2= document.getElementById('input-arr-3').value;fruitConcat(arr1,arr2)"
+            >
+              Concat
+            </button>
+            <br />OR
+            <input
+              type="text"
+              id="input-arr-2"
+              placeholder="Enter string to concat"
+            />,
+            <input
+              type="text"
+              id="input-arr-3"
+              placeholder="Enter string to concat"
+            />
+            <button
+              onclick="arr1= document.getElementById('input-arr-2').value;arr2= document.getElementById('input-arr-3').value;arrConcat(arr1,arr2)"
+            >
+              Concat
+            </button>
+            <label id="output--6"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>splice()</td>
+          <td>The splice() method adds new items to an array.</td>
+
+          <td>
+            Example :<br />
+            const flowers = ["rose","lily","tulip","lotus","sunflower"]<br />
+            Lets splice this array:<br />
+            <input
+              type="text"
+              id="input-num--2"
+              placeholder="Enter start index"
+            />,
+            <input
+              type="text"
+              id="input-num--3"
+              placeholder="Enter num of elements to remove"
+            />
+            <input
+              type="text"
+              id="input-txt--2"
+              placeholder="Enter element to add"
+            />,
+            <input
+              type="text"
+              id="input-txt--3"
+              placeholder="Enter element to add"
+            />
+            <button onclick="arrSplice()">Splice</button>
+            <label id="output--7"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Slice Method</td>
+          <td>The slice() method slices out a piece of an array.</td>
+          <td>
+            Example :<br />
+            const flowers = ["rose","lily","tulip","lotus","sunflower"]<br />
+            Lets slice this array:<br />
+            <input
+              type="number"
+              id="input-num--4"
+              placeholder="Enter start index"
+            />,
+            <input
+              type="number"
+              id="input-num--5"
+              placeholder="Enter end index"
+            />
+
+            <button onclick="arrSlice()">Slice</button>
+            <label id="output--8"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Sort</td>
+          <td>sorts elements in array.</td>
+          <td>
+            Example:["mango","watermelon","apple"]
+            <button onclick="arrSort()">Sort</button>
+            <label id="output--9"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Map</td>
+          <td>
+            It creates a new array from calling a function for every array
+            element.
+          </td>
+          <td>
+            Example: let users =[<br />
+            {firstName : "abc" , lastName:"def"},<br />
+            {firstName:"xyz",lastName:"qrt"}<br />
+            ]<br />
+            We will map this into usernames
+            <button onclick="arrMap()">Map</button>
+            <label id="output--10"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Filter</td>
+          <td>
+            This method creates a new array filled with elements that pass a
+            test provided by a function.
+          </td>
+          <td>
+            Example:age = [21,13,37,32,22]<br />
+            We filter the ages that can vote:<br />
+            <button onclick="arrFilter()">Filter</button>
+            <label id="output--11"></label>
+          </td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
