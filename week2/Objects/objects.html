@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+    <script>
+      function showObj() {
+        let user = {
+          name: "abc",
+          age: 30,
+        };
+        let key = document.getElementById("obj_key").value;
+        let value = document.getElementById("obj_value").value;
+
+        let user2 = {
+          [key]: value,
+        };
+        user[key] = value;
+        document.getElementById("obj_output").innerHTML = JSON.stringify(user);
+        console.log("prop", key, value, user, user2);
+      }
+      function delObj() {
+        let user = {
+          name: "abc",
+          age: 30,
+        };
+        let key2 = document.getElementById("obj_key1").value;
+        delete user[key2];
+        document.getElementById("obj_output1").innerHTML = JSON.stringify(user);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h3>
+      JavaScript object is a standalone entity that holds multiple values in
+      terms of properties and methods.
+    </h3>
+    <h3>Add Property</h3>
+    Example :<br />
+    user = { <br />name : "abc",<br />
+    age : 30<br /><br />
+    <input id="obj_key" placeholder="Enter property key" /> :
+    <input id="obj_value" placeholder="Enter property value" /><br />
+    }<br />
+    <button onclick="showObj()">Create Property</button>
+    <label id="obj_output"></label>
+    <hr />
+    <br />
+    <h3>Delete Object</h3>
+    <input id="obj_key1" placeholder="Enter property key" />
+    <button onclick="delObj()">Delete Property</button>
+    <label id="obj_output1"></label>
+  </body>
+</html>
