@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="object.js"></script>
+</head>
+<body>
+    <h1>Object Methods</h1>
+    <ul>
+        <li><h3>Object.entries()</h3>
+            method is used to return an array of a given object's own enumerable property [key, value] pairs. 
+            <br>
+            Example:const obj={<br>
+                color:"red",<br>
+                taste:"sweet",<br>
+                fruitName:{"apple","cherry","pomegranate"}<br>
+
+            }<br>
+            Object.entries(obj)[<input type="number" id="input_index" placeholder="Enter the index">]
+            <button onclick="entryObj()">Click to get output</button>
+            <label id="output-1"></label>
+        </li>
+        <li><h3>Object.values()</h3>
+            returns an array which contains the given object's own enumerable property values, in the same order as that provided by a for...in loop.
+            <br>
+            Example:const obj={<br>
+                color:"red",<br>
+                taste:"sweet",<br>
+
+            }<br>
+            Object.defineProperty(obj,"shape",{value:"round"},)<br>
+            Object.values(obj)<br><br>
+            As defineProperty is bydefault not-enumerable hence shape is not displayed in values result<br>
+            <button onclick="valueObj()">Click to get output</button>
+            <label id="output-2"></label>
+        </li>
+    </ul>
+</body>
+</html>

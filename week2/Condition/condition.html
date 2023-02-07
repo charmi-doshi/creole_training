@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condition</title>
+    <script src="condition.js"></script>
+  </head>
+  <body>
+    <h1>Conditions</h1>
+    <ul>
+      <li>
+        <h3>if-else and else-if</h3>
+        <button onclick="Greeting()">GREETING ACCORDING TO THE TIME</button>
+        <label id="if-else-output"></label>
+      </li>
+      <li>
+        <h3>nested if-else</h3>
+        <input id="year-input" placeholder="Enter a year" />
+        <button onclick="checkYear()">Leap year or not</button>
+        <label id="year-output"></label>
+      </li>
+      <li>
+        <h3>switch</h3>
+        Example:<br />
+        Hotel Menu<br />
+        1---->Gujarati thali<br />
+        2---->French fixed lunch<br />
+        3---->Thai cuisine fixed plate<br />
+        Choose your choice.<br />
+        <input id="choice-input" type="number" placeholder="Enter a number" />
+        <button onclick="menu()">Bill</button>
+        <label id="bill-output"></label>
+      </li>
+      <li>
+        <h3>ternary</h3>
+        <input id="input" type="number " placeholder="Enter your age" />
+        <button onclick="checkAge()">Submit</button>
+        <label id="output"></label>
+      </li>
+    </ul>
+  </body>
+</html>

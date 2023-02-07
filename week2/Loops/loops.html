@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+    <script src="loops.js"></script>
+  </head>
+  <body>
+    <h1>Loops</h1>
+    <ul>
+      <li>
+        <h3>for</h3>
+        for (Inialization; condition; finalExpression) { // code block to be
+        executed }
+        <br />
+        Example:<br />
+        Sum of numbers
+        <input id="number-input-1" placeholder="Enter number" />
+        <button onclick="loopFor()">SUM</button>
+        <label id="for-output"></label>
+      </li>
+      <li>
+        <h3>for-in</h3>
+        Used for iterating over properties of an object<br />
+        Example:<br />
+        const color = {<br />
+        0:"red",<br />
+        1:"green",<br />
+        2:"blue",<br />
+        3:"purple",<br />
+        4:"orange"<br />
+        }
+        <button onclick="loopForin()">output</button>
+        <label id="for-in-output"></label>
+      </li>
+      <li>
+        <h3>for-of</h3>
+        for (variable of iterable)<br />
+        statement <br />
+        Enter string to traverse
+        <input placeholder="Enter string" id="for-of-input" />
+        <button onclick="loopForof()">output</button><br />
+        <label id="for-of-output"></label>
+      </li>
+      <li>
+        <h3>while</h3>
+        while (condition)<br />
+        { code }<br />
+        Enter number of layers for triangle
+        <input placeholder="Enter number" id="while-input" />
+        <button onclick="loopWhile()">output</button><br />
+        <label id="dwhile-output"></label>
+      </li>
+      <li>
+        <h3>do...while</h3>
+        do<br />
+        { code }while(condition)<br />
+        Enter number to iterate from 0 Example:<br>
+        <input placeholder="Enter number" id="do-while-input" />
+        <button onclick="loopDoWhile()">output</button><br />
+        <label id="do-while-output"></label>
+      </li>
+    </ul>
+  </body>
+</html>
