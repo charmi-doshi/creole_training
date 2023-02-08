@@ -1,42 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="object.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Object Methods</h1>
     <ul>
-        <li><h3>Object.entries()</h3>
-            method is used to return an array of a given object's own enumerable property [key, value] pairs. 
-            <br>
-            Example:const obj={<br>
-                color:"red",<br>
-                taste:"sweet",<br>
-                fruitName:{"apple","cherry","pomegranate"}<br>
+      <li>
+        <h3>Object.entries()</h3>
+        method is used to return an array of a given object's own enumerable
+        property [key, value] pairs.
+        <br />
+        Example:const obj={<br />
+        color:"red",<br />
+        taste:"sweet",<br />
+        fruitName:{"apple","cherry","pomegranate"}<br />
 
-            }<br>
-            Object.entries(obj)[<input type="number" id="input_index" placeholder="Enter the index">]
-            <button onclick="entryObj()">Click to get output</button>
-            <label id="output-1"></label>
-        </li>
-        <li><h3>Object.values()</h3>
-            returns an array which contains the given object's own enumerable property values, in the same order as that provided by a for...in loop.
-            <br>
-            Example:const obj={<br>
-                color:"red",<br>
-                taste:"sweet",<br>
+        }<br />
+        Object.entries(obj)[<input
+          type="number"
+          id="input_index"
+          placeholder="Enter the index"
+        />]
+        <button onclick="entryObj()">Click to get output</button>
+        <label id="output-1"></label>
+      </li>
+      <li>
+        <h3>Object.values()</h3>
+        returns an array which contains the given object's own enumerable
+        property values, in the same order as that provided by a for...in loop.
+        <br />
+        Example:const obj={<br />
+        color:"red",<br />
+        taste:"sweet",<br />
 
-            }<br>
-            Object.defineProperty(obj,"shape",{value:"round"},)<br>
-            Object.values(obj)<br><br>
-            As defineProperty is bydefault not-enumerable hence shape is not displayed in values result<br>
-            <button onclick="valueObj()">Click to get output</button>
-            <label id="output-2"></label>
-        </li>
+        }<br />
+        Object.defineProperty(obj,"shape",{value:"round"},)<br />
+        Object.values(obj)<br /><br />
+        As defineProperty is bydefault not-enumerable hence shape is not
+        displayed in values result<br />
+        <button onclick="valueObj()">Click to get output</button>
+        <label id="output-2"></label>
+      </li>
+      <br />
+      <hr />
+      <li>
+        <h3>Object.getPrototypeOf()</h3>
+        <br />
+        It returns the prototype of the object given in the param. Example:const
+        obj={<br />
+        color:"red",<br />
+        taste:"sweet",<br />
+
+        }<br /><br />
+
+        <button onclick="getPrototype()">getPrototype of obj</button>
+        <label id="output-3"></label>
+      </li>
+      <br />
+      <hr />
+      <li>
+        <h3>Object.keys()</h3>
+        <br />
+        It creates an array containing kys of the object<br />
+
+        Example:const employees={<br />
+        CEO:"abc",<br />
+        secretary:"xyz",<br />
+        sales:"pqr",<br />
+
+        }<br /><br />
+
+        <button onclick="getObjectKeys()">get employee roles</button>
+        <label id="output-4"></label>
+      </li>
+      <br />
+      <hr />
+      <li>
+        <h3>Object.assign()</h3>
+        <br />
+        is used to copy values from one object to another.<br />
+
+        Example:const employees={<br />
+        CEO:"abc",<br />
+        secretary:"xyz",<br />
+        sales:"pqr",<br />
+
+        }<br />
+        const equipment = {<br />
+        laptop : "dell",<br />
+        mouse : "wired",<br />
+        headphones : "sony"<br />
+        }<br />
+
+        const junior_employee = Object.assign(employees,equipment)<br />
+        Lets assign junior_employee its equipment as well as info about his
+        seniors.
+        <button onclick="getObjectAssign()">Assign</button>
+        <label id="output-5"></label>
+      </li>
+      <br />
+      <hr />
+      <li>
+        <h3>Object.freeze()</h3>
+        <br />
+        It is a method that prevents new properties from being added to it and
+        doesnt let previous properties be modified.<br />
+
+        const equipment = {<br />
+        laptop : "dell",<br />
+        mouse : "wired",<br />
+        headphones : "sony"<br />
+        }<br />
+        <input placeholder="enter new object" id="obj-input" />
+        <br />
+        The output will be the object because freeze method doesnt allow
+        modification or addition
+        <button onclick="getObjectFreeze()">freeze</button>
+        <button onclick="getIsFrozen()">isfrozen or not?</button>
+        <label id="output-6"></label>
+      </li>
+      <br />
+      <hr />
+      <li>
+        <h3>Object.getOwnPropertyDescriptor()</h3>
+        <br />
+        It returns a property descriptor of the given property if it exists on
+        the object<br />
+
+        const equipment = {<br />
+        laptop : "dell",<br />
+        mouse : "wired",<br />
+        headphones : "sony"<br />
+        }<br />
+        Object.getOwnPropertyDescripter(equipment,"<input
+          placeholder="enter property name"
+          id="property-input"
+        />")
+        <button onclick="getPropDesc()">getPropertyDescriptor</button>
+        <label id="output-7"></label>
+      </li>
+      <br />
+      <hr />
+      <li>
+        <h3>Object.getOwnPropertyDescriptors()</h3>
+        <br />
+        It returns all property descriptor on the object<br />
+        Lets check the properties of the Object.prototype
+        <button onclick="getAllPropDesc()">getPropertyDescriptor</button>
+        <label id="output-8"></label>
+      </li>
+      <br />
+      <hr />
+      <li>
+        <h3>Object.is()</h3>
+        <br />
+        It is used to determine whether two values are the same value. There is
+        a special built-in method that compares values. <br>
+        Example : let str1 ="abc" <br>
+        let str2 = new String("abc")<br> 
+         Let check if it is equal or not by the Object.is( str1,<select id="str-input-1">
+          <option value="str1" selected>str1</option>
+          <option value="str2">str2</option>
+          
+        </select>
+        str2,<select id="str-input-2">
+          <option value="str1">str1</option>
+          <option value="str2" selected>str2</option>
+          </select>)<br>
+        <button type="submit" onclick="getObjectIs()">equal?</button>
+       
+        <label id="output-9"></label>
+      </li>
+      <br />
+      <hr />
     </ul>
-</body>
+  </body>
 </html>

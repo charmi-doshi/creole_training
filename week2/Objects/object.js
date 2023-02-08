@@ -1,4 +1,3 @@
-
 function showObj() {
   let user = {
     name: "abc",
@@ -53,14 +52,82 @@ function entryObj() {
   document.getElementById("output-1").innerHTML = res;
   console.log(res);
 }
+const obj = {
+  color: "red",
+  taste: "sweet",
+};
 function valueObj() {
-  const obj = {
-    color: "red",
-    taste: "sweet",
-    
-  };
-  Object.defineProperty(obj,"shape",{value:"round",},)
+  Object.defineProperty(obj, "shape", { value: "round" });
 
-  document.getElementById("output-2").innerHTML =  Object.values(obj)
-  console.log( Object.values(obj));
+  document.getElementById("output-2").innerHTML = Object.values(obj);
+  console.log(Object.values(obj));
+}
+function getPrototype() {
+  document.getElementById("output-3").innerHTML = Object.getPrototypeOf(obj);
+}
+function getObjectKeys() {
+  const employees = {
+    boss: "Michael",
+    secretary: "Pam",
+    sales: "Jim",
+    accountant: "Oscar",
+  };
+  let roles = Object.keys(employees);
+
+  document.getElementById("output-4").innerHTML = roles.join(",");
+}
+//freeze and seal
+const employees = {
+  boss: "Michael",
+  secretary: "Pam",
+  sales: "Jim",
+  accountant: "Oscar",
+};
+
+const equipment = {
+  laptop: "dell",
+  mouse: "wired",
+  headphones: "sony",
+};
+function getObjectAssign() {
+  
+  const junior_employee = Object.assign(employees, equipment);
+  console.log(junior_employee);
+  document.getElementById("output-5").innerHTML =JSON.stringify(junior_employee);
+}
+function getObjectFreeze()
+{
+  Object.freeze(equipment);
+  let input = document.getElementById("obj-input").value;
+  equipment.input = input
+  console.log(input)
+  document.getElementById("output-6").innerHTML =JSON.stringify(equipment);
+  
+}
+function getIsFrozen(){
+  let res = Object.isFrozen(equipment)
+  document.getElementById("output-6").innerHTML =res;
+}
+function getPropDesc(){
+  let input = document.getElementById("property-input").value;
+  let res = Object.getOwnPropertyDescriptor(equipment,input)
+  console.log(res)
+  document.getElementById("output-7").innerHTML = JSON.stringify(res);
+}
+function getAllPropDesc(){
+  let des = Object.getOwnPropertyDescriptors(Object.prototype)
+  console.log(des)
+  document.getElementById("output-8").innerHTML = JSON.stringify(des);
+}
+function getObjectIs(){
+
+  let str1 = "abc"
+  let str2 = new String("abc")
+   
+
+  let choice1 = document.getElementById("str-input-1").value;
+  let choice2 = document.getElementById("str-input-2").value;
+  let res = Object.is(choice1,choice2)
+  console.log(res,choice1,choice2)
+  document.getElementById("output-9").innerHTML = res;
 }

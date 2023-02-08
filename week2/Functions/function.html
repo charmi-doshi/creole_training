@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <script src="functions.js"></script>
+</head>
+<body>
+    <h1>Functions</h1>
+    <ul>
+        <li>call()<br>
+            const emp1 = {<br>
+                salary:10000,<br>
+                bonus:2000,<br>
+                tax:100<br>
+            }<br>
+            
+           
+            <button  onclick="funcCall()">onHandSalary</button>
+            <label id="func-output"></label>
+        </li>
+        <li>bind()
+            const Car = {
+                name:"ford",
+                details : function(){
+                    return this.model + " " + this.mileage
+                }
+            }
+            const car1 = {
+                model : "xyz",
+                mileage : "80kmph"
+            }
+            
+            const car2 = {
+                model : "abc",
+                mileage : "50kmph"
+            }
+            <button  onclick="funcBind()">onHandSalary</button>
+            <label id="func-output-2"></label>
+        </li>
+    </ul>
+</body>
+</html>
