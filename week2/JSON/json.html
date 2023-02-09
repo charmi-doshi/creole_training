@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="json.js"></script>
+  </head>
+  <body>
+    <h1>JSON</h1>
+    <ul>
+      <li>
+        <h3>JSON.parse()</h3>
+        <br />
+        It converts the json data into string.<br />
+        example:{ .<br />
+        "employees":{ .
+        <br />&emsp;"sales":{ "name":"abc","status":"online" }, <br />
+        &emsp;"developers":{ <br />&emsp;&emsp;"frontend":{ "js":12,
+        "reactjs":20 }, <br />
+        &emsp;&emsp;"backend":{ "nodejs":17, "java":20 } } }<br />
+        }<br />
+        this into string format will be:
+        <button onclick="parse()">Parse</button>
+        <label id="json-output"></label>
+      </li>
+      <li>
+        <h3>JSON.stringify() method</h3>
+        <br />
+        It converts the string into json format.<br />
+        Example: const obj = { <br /><br />"name" :
+        <input id="json-val-1" placeholder="enter name" />,<br /><br />
+        "age" : <input id="json-val-2" placeholder="enter age" />,<br /><br />
+        "country" :
+        <input id="json-val-3" placeholder="enter country" />,<br /><br />
+        } <br /><br />
+        converts this into json<br />
+        <button onclick=" jsonToString()">Stringify</button><br />
+        <label id="json-output-2"></label>
+      </li>
+    </ul>
+  </body>
+</html>
