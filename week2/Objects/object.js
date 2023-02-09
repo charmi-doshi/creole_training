@@ -46,6 +46,8 @@ function setObj() {
     "person.getName=" + person.getName;
   console.log(person);
 }
+
+//object methods
 function entryObj() {
   let index = document.getElementById("input_index").value;
   let res = Object.entries(obj)[index];
@@ -90,44 +92,40 @@ const equipment = {
   headphones: "sony",
 };
 function getObjectAssign() {
-  
   const junior_employee = Object.assign(employees, equipment);
   console.log(junior_employee);
-  document.getElementById("output-5").innerHTML =JSON.stringify(junior_employee);
+  document.getElementById("output-5").innerHTML =
+    JSON.stringify(junior_employee);
 }
-function getObjectFreeze()
-{
+function getObjectFreeze() {
   Object.freeze(equipment);
   let input = document.getElementById("obj-input").value;
-  equipment.input = input
-  console.log(input)
-  document.getElementById("output-6").innerHTML =JSON.stringify(equipment);
-  
+  equipment.input = input;
+  console.log(input);
+  document.getElementById("output-6").innerHTML = JSON.stringify(equipment);
 }
-function getIsFrozen(){
-  let res = Object.isFrozen(equipment)
-  document.getElementById("output-6").innerHTML =res;
+function getIsFrozen() {
+  let res = Object.isFrozen(equipment);
+  document.getElementById("output-6").innerHTML = res;
 }
-function getPropDesc(){
+function getPropDesc() {
   let input = document.getElementById("property-input").value;
-  let res = Object.getOwnPropertyDescriptor(equipment,input)
-  console.log(res)
+  let res = Object.getOwnPropertyDescriptor(equipment, input);
+  console.log(res);
   document.getElementById("output-7").innerHTML = JSON.stringify(res);
 }
-function getAllPropDesc(){
-  let des = Object.getOwnPropertyDescriptors(Object.prototype)
-  console.log(des)
+function getAllPropDesc() {
+  let des = Object.getOwnPropertyDescriptors(Object.prototype);
+  console.log(des);
   document.getElementById("output-8").innerHTML = JSON.stringify(des);
 }
-function getObjectIs(){
-
-  let str1 = "abc"
-  let str2 = new String("abc")
-   
+function getObjectIs() {
+  let str1 = "abc";
+  let str2 = new String("abc");
 
   let choice1 = document.getElementById("str-input-1").value;
   let choice2 = document.getElementById("str-input-2").value;
-  let res = Object.is(choice1,choice2)
-  console.log(res,choice1,choice2)
+  let res = Object.is(choice1, choice2);
+  console.log(res, choice1, choice2);
   document.getElementById("output-9").innerHTML = res;
 }

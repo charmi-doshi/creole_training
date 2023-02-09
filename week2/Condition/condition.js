@@ -2,9 +2,9 @@
 //if - else , else-if function
 function Greeting() {
   const date = new Date();
-  let hour = date.getHours;
+  let hour = date.getHours();
   let greet = " ";
-  console.log(hour);
+  console.log(date,hour);
   if (hour < 12) {
     greet = "Good Morning";
   } else if (hour == 12) {

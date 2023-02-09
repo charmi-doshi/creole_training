@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Object</title>
-    <script src="object.js">
-
-    </script>
+    <script src="object.js"></script>
   </head>
   <body>
     <h1>Object</h1>
@@ -30,23 +28,23 @@
     <input id="obj_key1" placeholder="Enter property key" />
     <button onclick="delObj()">Delete Property</button>
     <label id="obj_output1"></label>
-    <hr>
-    <br>
+    <hr />
+    <br />
     <h3>Getter and setter</h3>
-    const person = {<br>
-        firstName : "abc",<br>
-        lastName : "xyz",<br>
-        get getName(){<br>
-            return this.firstName;<br>
-        },<br>
-        set setName(name){<br>
-            this.firstName = name<br>
-        },    <br>
-      
-    }<br>
+    const person = {<br />
+    firstName : "abc",<br />
+    lastName : "xyz",<br />
+    get getName(){<br />
+    return this.firstName;<br />
+    },<br />
+    set setName(name){<br />
+    this.firstName = name<br />
+    }, <br />
+
+    }<br />
     <input id="obj_key2" placeholder="Enter firstname" />
     <button onclick="setObj()">set Property firstName</button>
-   
+
     <label id="obj_output2"></label>
   </body>
 </html>

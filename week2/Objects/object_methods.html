@@ -14,11 +14,10 @@
         <h3>Object.entries()</h3>
         method is used to return an array of a given object's own enumerable
         property [key, value] pairs.
-        <br />
-        Example:const obj={<br />
+        <br /><br />
+        Example:<br />const obj={<br />
         color:"red",<br />
         taste:"sweet",<br />
-        fruitName:{"apple","cherry","pomegranate"}<br />
 
         }<br />
         Object.entries(obj)[<input
@@ -29,12 +28,14 @@
         <button onclick="entryObj()">Click to get output</button>
         <label id="output-1"></label>
       </li>
+      <br />
+      <hr />
       <li>
         <h3>Object.values()</h3>
         returns an array which contains the given object's own enumerable
         property values, in the same order as that provided by a for...in loop.
-        <br />
-        Example:const obj={<br />
+        <br /><br />
+        Example:<br />const obj={<br />
         color:"red",<br />
         taste:"sweet",<br />
 
@@ -51,8 +52,8 @@
       <li>
         <h3>Object.getPrototypeOf()</h3>
         <br />
-        It returns the prototype of the object given in the param. Example:const
-        obj={<br />
+        It returns the prototype of the object given in the param.
+        <br />Example:<br />const obj={<br />
         color:"red",<br />
         taste:"sweet",<br />
 
@@ -65,13 +66,14 @@
       <hr />
       <li>
         <h3>Object.keys()</h3>
-        <br />
-        It creates an array containing kys of the object<br />
+
+        It creates an array containing kys of the object<br /><br />
 
         Example:const employees={<br />
-        CEO:"abc",<br />
-        secretary:"xyz",<br />
-        sales:"pqr",<br />
+        boss: "Michael",<br />
+        secretary: "Pam",<br />
+        sales: "Jim",<br />
+        accountant: "Oscar",<br />
 
         }<br /><br />
 
@@ -82,13 +84,14 @@
       <hr />
       <li>
         <h3>Object.assign()</h3>
-        <br />
-        is used to copy values from one object to another.<br />
+
+        It is used to copy values from one object to another.<br /><br />
 
         Example:const employees={<br />
-        CEO:"abc",<br />
-        secretary:"xyz",<br />
-        sales:"pqr",<br />
+        boss: "Michael",<br />
+        secretary: "Pam",<br />
+        sales: "Jim",<br />
+        accountant: "Oscar",<br />
 
         }<br />
         const equipment = {<br />
@@ -107,17 +110,18 @@
       <hr />
       <li>
         <h3>Object.freeze()</h3>
-        <br />
+
         It is a method that prevents new properties from being added to it and
-        doesnt let previous properties be modified.<br />
+        doesnt let previous properties be modified.<br /><br />
 
         const equipment = {<br />
         laptop : "dell",<br />
         mouse : "wired",<br />
         headphones : "sony"<br />
         }<br />
-        <input placeholder="enter new object" id="obj-input" />
         <br />
+        <input placeholder="enter new object" id="obj-input" />
+        <br /><br />
         The output will be the object because freeze method doesnt allow
         modification or addition
         <button onclick="getObjectFreeze()">freeze</button>
@@ -148,9 +152,9 @@
       <hr />
       <li>
         <h3>Object.getOwnPropertyDescriptors()</h3>
-        <br />
+
         It returns all property descriptor on the object<br />
-        Lets check the properties of the Object.prototype
+        Lets check the properties of the Object.prototype <br /><br />
         <button onclick="getAllPropDesc()">getPropertyDescriptor</button>
         <label id="output-8"></label>
       </li>
@@ -158,22 +162,22 @@
       <hr />
       <li>
         <h3>Object.is()</h3>
-        <br />
+
         It is used to determine whether two values are the same value. There is
-        a special built-in method that compares values. <br>
-        Example : let str1 ="abc" <br>
-        let str2 = new String("abc")<br> 
-         Let check if it is equal or not by the Object.is( str1,<select id="str-input-1">
+        a special built-in method that compares values. <br /><br />
+        Example : let str1 ="abc" <br />
+        let str2 = new String("abc")<br />
+        Let check if it is equal or not by the Object.is(
+        <select id="str-input-1">
           <option value="str1" selected>str1</option>
           <option value="str2">str2</option>
-          
         </select>
-        str2,<select id="str-input-2">
+        <select id="str-input-2">
           <option value="str1">str1</option>
-          <option value="str2" selected>str2</option>
-          </select>)<br>
+          <option value="str2" selected>str2</option></select
+        >)<br />
         <button type="submit" onclick="getObjectIs()">equal?</button>
-       
+
         <label id="output-9"></label>
       </li>
       <br />
