@@ -72,4 +72,3 @@ function createEmployee() {
     devEmp.displaySalary();
   }
 }
-

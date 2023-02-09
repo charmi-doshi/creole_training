@@ -8,8 +8,7 @@ class Travel {
   }
 
   details() {
-  
-    return `${this.personName} is going to ${this.locationName} through ${this.airplaneName}`
+    return `${this.personName} is going to ${this.locationName} through ${this.airplaneName}`;
   }
 }
 
