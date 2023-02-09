@@ -13,13 +13,20 @@
         
         <li>
             Employee
-            <form>
-            <input id="emp-id" placeholder="enter emp-id">
-            <input id="name" placeholder="enter name">
-            <input id="address" placeholder="enter address">
-            <input id="role-name" placeholder="enter role-name">
-            <button type="submit" onclick="createEmp()">Submit</button>
-        </form>
+        
+          
+            Enter the employee name:
+            <input id="emp-name" placeholder="enter name"><br>
+           <br> 
+             <select  id="department">Select Department
+                <option value="sales">Sales</option>
+                <option value="developer">Developer</option>
+             </select><br><br>
+             <button onclick="createEmployee()">Submit</button>
+             
+             <br><br>
+             <label id="message"></label><br>
+             <label id="salary-message"></label>
         </li>
     </ul>
 </body>
