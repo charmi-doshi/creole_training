@@ -12,7 +12,7 @@ function checkSum() {
     res = "The sum of the numbers is 50";
     console.log(res);
   }
-  
+
   console.log(num1 + num2, res);
   document.getElementById("output_1").innerHTML = res;
 }
@@ -89,7 +89,7 @@ function getLongestStr() {
   }
 
   console.log("longeest:- " + max);
-  document.getElementById("output").innerHTML = "longest str is: "+max;
+  document.getElementById("output").innerHTML = "longest str is: " + max;
 }
 //8
 function getLargerNum() {
