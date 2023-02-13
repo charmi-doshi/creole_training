@@ -119,13 +119,11 @@ function getLargestNum() {
     array.push(input);
   }
   console.log(array);
-  let max = array[0],
-    min;
+  let max = array[0]
   for (let j = 0; j < array.length; j++) {
     if (array[j] > max) {
-      min = max;
       max = array[j];
-      console.log(min, max);
+      console.log(max);
     }
   }
   alert("Largest is" + max);
