@@ -30,59 +30,77 @@ function replaceChar() {
 }
 //3
 function commonChar() {
-  let str = "heggbdefff";
+  let str = "heggbdeff";
 
   let tempStr = str.split("");
   let duplicate = [];
   function common(char, index) {
     if (tempStr.indexOf(char) == index) {
-      
       return char;
-    }
-    else{
-        duplicate.push(char)
+    } else {
+      duplicate.push(char);
     }
   }
 
   let array = tempStr.filter(common);
-  
-  let tempChar = duplicate.join("");
-  
-  let max = 0
-  let max_char = " "
-  let l =[]
-  for (let i = 0; i < array.length; i++) {
-    let len = tempChar.substring(duplicate.indexOf(array[i]),duplicate.lastIndexOf(array[i])).length
-    l.push(len)
-    if(len > max){
-        max = len
-        max_char = array[i]
-        console.log(max,max_char);
+
+  //let tempChar = duplicate.join("");
+
+  let max = 0;
+ let maxChar = ""
+  for (let char of str) {
+    if (duplicate[char]) {
+      duplicate[char]++;
+    } else {
+      duplicate[char] = 1;
     }
-    
   }
-  
-  document.getElementById("output-3").innerHTML = max_char;
-  console.log(array, tempChar,duplicate);
-  console.log(max,max_char,l);
+
+  for (let char in duplicate) {
+    if (duplicate[char] > max) {
+      max = duplicate[char];
+      maxChar = char;
+    }
+  }
+
+  document.getElementById("output-3").innerHTML = maxChar;
+  console.log(array, duplicate);
+  console.log(max, maxChar);
 }
 
 //4
-function repeatChar() {
-  let str = "xybbbefaaag";
-  let count = 0;
+function commonChar2() {
+  let str = "tfghhhplffzaaa";
+  let max = 3;
   let tempStr = str.split("");
+  let duplicate = [];
   function common(char, index) {
-    if (tempStr.indexOf(char) != index) {
-      count++;
-      if (count > 2) {
-        return char;
-      }
+    if (tempStr.indexOf(char) == index) {
+      return char;
+    } else {
+      duplicate.push(char);
     }
   }
 
   let array = tempStr.filter(common);
-  console.log(array);
+  let maxChar = [];
+  for (let char of str) {
+    if (duplicate[char]) {
+      duplicate[char]++;
+    } else {
+      duplicate[char] = 1;
+    }
+  }
+
+  for (let char in duplicate) {
+    if (duplicate[char] >= max) {
+      max = duplicate[char];
+      maxChar.push(char);
+    }
+  }
+  console.log(duplicate);
+  console.log(maxChar);
+  document.getElementById("output-4").innerHTML = maxChar;
 }
 
 //5
@@ -90,7 +108,7 @@ function vowelCons() {
   let str = document.getElementById("input-txt").value;
   let index = document.getElementById("input-num").value;
   let res = "";
-  let char = str.charAt(index - 1);
+  let char = str.charAt(index);
   console.log(char);
 
   if (
@@ -177,43 +195,34 @@ function strRandom() {
   str = "hello";
 
   let tempStr = str.split("");
-  let random = [];
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length - 1; i++) {
     let index = Math.floor(Math.random() * str.length);
 
-    random.push(tempStr[index]);
-
-    console.log(str[index]);
+    temp = tempStr[i];
+    tempStr[i] = str[index];
+    str[index] = temp;
+    console.log(tempStr[index]);
   }
 
-  console.log(random.join(""));
-  document.getElementById("output-10").innerHTML = random;
+  document.getElementById("output-10").innerHTML = tempStr;
 }
-//10
+
 //11
-function altCap(){
-    str = "I am a string"
-    let tempStr = str.split(" ")
-    
-    let tempStr2=[]
-    let tempStr3 = []
-    let temp = tempStr.join("")
-    for(let i=0;i<temp.length;i++){
-        if(i%2==0){
-       tempStr2.push(temp[i].toUpperCase())
-        }else{
-            tempStr2.push(temp[i])
-        }
-    }
-  for(let j=0;j<str.length;j++){
-    if(str[j]===" "){
-        tempStr3.push(" ")
-    }
-    else{
-        tempStr3.push(tempStr2[j])
+function altCap() {
+  let str = "I am a string";
+  //
+  let finalStr = str.charAt(0).toUpperCase();
+  for (let i = 1; i < str.length; i++) {
+    let char = finalStr.charAt(i - 1);
+    if (char === char.toUpperCase()) {
+      console.log(finalStr, char, i);
+      finalStr += str.charAt(i).toLowerCase();
+    } else if (char === char.toLowerCase()) {
+      finalStr += str.charAt(i).toUpperCase();
     }
   }
-    console.log(tempStr3,temp);
+  document.getElementById("output-11").innerHTML = finalStr;
+  console.log(finalStr);
 }
 
 //12
@@ -230,9 +239,13 @@ function getQuote() {
 }
 //13
 function validate() {
-  let str = "somebody@eail.com";
-  let emailVal = /^[*a-b].com/;
-  console.log(emailVal.test(str));
+  let str = "somebody@email.com";
+  let emailVal =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z]+)*$/;
+  let res = false;
+  if (emailVal.test(str)) {
+    res = true;
+  }
   console.log(str.match(emailVal));
-  document.getElementById("output-13").innerHTML = "";
+  document.getElementById("output-13").innerHTML = res;
 }
