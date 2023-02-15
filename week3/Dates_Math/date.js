@@ -1,9 +1,10 @@
 //Date object
 const date = new Date()
 function currentDate(){
+    console.log(date)
     document.getElementById("output").innerHTML = date
 }
-function day(){
+function getDay(){
    
     day = date.getDay()
 
@@ -43,4 +44,16 @@ function minute(){
 }
 function seconds(){
     document.getElementById("output").innerHTML = date.getSeconds()
+}
+
+function custom(){
+    let date1 = new Date() 
+    let year =   document.getElementById("year-input").value
+    let month =   Number(document.getElementById("month-input").value) -1
+    let d =   document.getElementById("date-input").value
+    date1.setFullYear(document.getElementById("year-input").value);
+    date1.setMonth(month)
+    date1.setDate(d)
+    console.log(year,month,d,date1);
+    document.getElementById("year-output").innerHTML = "your ouput is: "+ date1
 }

@@ -133,9 +133,15 @@ function vowelCons() {
 function strSort() {
   let res = "";
   let str = document.getElementById("input-txt-6").value;
+  let status = document.getElementById("input-status").value;
   let tempStr = str.split("");
   tempStr.sort();
-  console.log(tempStr.join(""));
+
+  if(status === "true" )
+  {
+    tempStr.reverse()
+  }
+    console.log(tempStr.join(""));
   document.getElementById("output-6").innerHTML = tempStr.join("");
 }
 //7
@@ -193,14 +199,18 @@ function findStr() {
 //10
 function strRandom() {
   str = "hello";
-
+ let l = []
   let tempStr = str.split("");
   for (let i = 0; i < str.length - 1; i++) {
     let index = Math.floor(Math.random() * str.length);
 
-    temp = tempStr[i];
-    tempStr[i] = str[index];
-    str[index] = temp;
+    l.push(index)
+    
+      temp = tempStr[i];
+      tempStr[i] = str[index];
+      str[index] = temp;
+
+   
     console.log(tempStr[index]);
   }
 
