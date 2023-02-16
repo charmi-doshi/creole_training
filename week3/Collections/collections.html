@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GroceryList</title>
+    <script src="collections.js"></script>
+    <style>
+      #box {
+        border: 2px solid black;
+        padding: 20px;
+      }
+      #result {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>collections</h1>
+    <h2>GroceryList</h2>
+    <ul>
+      <li>
+        <h3>Set GroceryList</h3>
+
+        Enter vegetables and fruits:<br /><br />
+        <input id="name" placeholder="enter vegetables and fruits" />
+        <input id="quan" placeholder="enter quantity" />
+        <button onclick="setGroceryList()">enter item</button><br /><br />
+        Enter dairy items<br /><br />
+        <input id="dairy-name" placeholder="enter dairy" />
+
+        <button onclick="setDairyList()">enter dairy-item</button>
+      </li>
+      <br /><br />
+      <hr />
+      <li>
+        <h3>Get GroceryList></h3>
+        <button onclick="getGroceryList()">getGroceryList</button
+        ><br /><br /><br />
+        <div id="box">
+          <label id="grocery"></label>
+        </div>
+      </li>
+      <hr />
+      <li>
+        <h3>Search GroceryList</h3>
+        <input id="search" placeholder="search item" />
+        <button onclick="searchList()">search</button><br /><br />
+
+        <label id="result"></label>
+      </li>
+      <br />
+      <hr />
+      <li>
+        <h3>Remove Item</h3>
+        remove from vegetables:
+        <input id="delete" placeholder="delete item" />
+        <button onclick="deleteItem()">delete</button><br /><br />
+        remove from dairy products:
+        <input id="dairy-delete" placeholder="delete item" />
+        <button onclick="deleteDairyItem()">delete-dairyitem</button
+        ><br /><br />
+
+        <label id="result-2"></label>
+      </li>
+    </ul>
+    <button onclick="reset()">Reset list</button>
+  </body>
+</html>
