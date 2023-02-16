@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hoist(){
+            let choice = document.getElementById("choice").value
+            console.log(choice)
+                if(choice == "let"){
+               
+                    document.getElementById("response").innerHTML = "cant acess x before initialization"
+                }
+                if(choice == "var"){
+                    x = 5
+                    console.log(x)
+                    var x;
+                    document.getElementById("response").innerHTML = x
+                }
+                else if(choice == "const"){
+    
+                    document.getElementById("response").innerHTML = "const cannot be used as it does not allow hoisting"
+                }
+                
+        }
+    </script>
+</head>
+<body>
+    <h1>Variable hoisting</h1>
+    In JS ,hoisting is behaviour in which function is used before declared.<br><br>
+    Example : <br>
+    x = 20<br>
+    console.log(x)<br>
+
+    <select id="choice">
+        <option value="var">var</option>
+        <option value="let">let</option>
+        <option value="const">const</option>
+        </select><br><br>
+    <button onclick="hoist()">hoisting</button><br><br>
+    <label id="response"></label>
+</body>
+</html>

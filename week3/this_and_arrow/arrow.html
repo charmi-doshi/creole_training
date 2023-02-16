@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="arrow.js"></script>
+</head>
+<body>
+    
+    <h1>this keyword</h1>
+   
+    <input id="first-name" placeholder="enter firstname" /> -
+    <input id="last-name" placeholder="enter lastname" /> -
+<input id="role" placeholder="enter role" />
+<button onclick="thisDemo()">this</button>
+<br>
+<label id="output"></label>
+<h1>Arrow function</h1>
+    It is an alternative to traditional expression.<br>
+    var variable = "global"<br>
+    const obj = {<br>
+        variable : "obj",<br>
+        arrowFunc : () =>{<br>
+            console.log(this.variable)<br>
+            return this.variable<br>
+        },<br>
+        regFunc(){<br>
+
+            return this.variable<br>
+        }<br>
+    }<br>
+    <button onclick="getMyFunction()">check</button><br>
+    arrowFunc will return global obj:- <label style="color:green" id="output-2"></label><br><br>
+    regular Function will return its object scope:- <label style="color:green" id="output-3"></label><br>  
+</body>
+</html>

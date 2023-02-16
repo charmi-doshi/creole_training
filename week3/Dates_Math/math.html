@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math</title>
+    <script src="math.js"></script>
+    <style>
+      #box {
+        border: 2px solid black;
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Math function</h1>
+    <ul>
+      <li>
+        <h3>Math max and min</h3>
+        <input id="num-input-1" placeholder="enter num1" />
+        <input id="num-input-2" placeholder="enter num2" />
+        <input id="num-input-3" placeholder="enter num3" />
+        <button onclick="maxMin()">check</button><br />
+        <label id="output-1"></label>
+      </li>
+      <li>
+        <h3>Math.pow()</h3>
+        <input id="num-input-4" placeholder="enter base" />
+        <input id="num-input-5" placeholder="enter exp" />
+        <button onclick="powNum()">getPow</button><br />
+        <label id="output-2"></label>
+      </li>
+      <li>
+        <h3>Math.sqrt()</h3>
+        <input id="num-input-6" placeholder="enter num" />
+
+        <button onclick="sqrtNum()">getSqrt</button><br />
+        <label id="output-3"></label>
+      </li>
+      <li>
+        <h3>Math.ceil()</h3>
+        rounds a num to the next largest integer
+        <input id="num-input-7" placeholder="enter num" />
+
+        <button onclick="ceilNum()">ceil</button><br />
+        <label id="output-4"></label>
+      </li>
+      <li>
+        <h3>Math.round()</h3>
+
+        <input id="num-input-8" placeholder="enter num" />
+
+        <button onclick="roundNum()">round</button><br />
+        <label id="output"></label>
+      </li>
+      <li>
+        <h3>Lottery machine</h3>
+        Winner Ticket Num : 4
+        <br />
+        <button onclick="lotteryTicket()">getTicket</button><br /><br />
+
+        <div id="box">
+          <label id="ticket-output"></label><br /><label id="output-5"></label>
+        </div>
+      </li>
+      <li>
+        <h3>Math trigo</h3>
+        <ol>
+          <li>
+            <h3>sin()</h3>
+            <input id="num-input-9" placeholder="enter angle" />
+
+            <button onclick="sinNum()">sin</button><br />
+            <label id="output-9"></label>
+          </li>
+          <li>
+            <h3>cos</h3>
+            <input id="num-input-10" placeholder="enter angle" />
+
+            <button onclick="cosNum()">cos</button><br />
+            <label id="output-10"></label>
+            
+          </li>
+          <li>
+            <h3>tan</h3>
+            <input id="num-input-11" placeholder="enter angle" />
+
+            <button onclick="tanNum()">tan</button><br />
+            <label id="output-11"></label>
+            
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </body>
+</html>
