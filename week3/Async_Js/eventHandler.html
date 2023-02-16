@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event</title>
     <style>
-        #shape{
-            height: 200px;
-            width: 400px;
-            background-color: cornflowerblue;
-        }
+      #shape {
+        height: 200px;
+        width: 400px;
+        background-color: cornflowerblue;
+      }
     </style>
-</head>
-<body>
+    <script>
+      function onMouseOver() {
+        document.getElementById("shape").style.borderRadius = "50%";
+      }
+      document.getElementById("p").addEventListener("click", onClickEvent);
+
+      function onClickEvent() {
+        document.getElementById("shape").style.borderRadius =
+          "Shape is changed to circle";
+      }
+      
+      //callback function 
+      function myCallback(){
+         setTimeout(sayHello,2000);
+      }
+      function sayHello(){
+        const date = new Date;
+        document.getElementById("cb-output").innerHTML="Hello, its been 2 seconds from the time you clicked the button" + d; 
+      }
+    </script>
+  </head>
+  <body>
     <h1>Event Handler and Callbacks</h1>
     <h3>Event Handler</h3>
-    <div id="shape" onmouseover="">
-        
+    <div id="shape" onmouseover="onMouseOver()">
+      <p id="text">Click here to change!! </p>
     </div>
-</body>
+    <h3>Callback</h3>
+    <button onclick="myCallback()">click here!!</button>
+  </body>
 </html>
