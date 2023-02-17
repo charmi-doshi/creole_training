@@ -2,7 +2,7 @@ function setCookie(){
     let cName = document.getElementById('name').value
     
     var expirydate=new Date();
-expirydate.setTime( expirydate.getTime()+(100*60*60*24*100) )
+expirydate.setTime( expirydate.getTime()+(1000*60*60*24*10) )
 
 document.cookie = "name="+ cName+";expires="+expirydate.toGMTString()  
     console.log(cName);
@@ -11,4 +11,5 @@ document.cookie = "name="+ cName+";expires="+expirydate.toGMTString()
 function getCookie(){
     let arr = document.cookie
     console.log(arr);
+    document.getElementById("output").innerHTML = arr
 }

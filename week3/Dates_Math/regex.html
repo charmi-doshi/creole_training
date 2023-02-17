@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      #login {
+        text-align: center;
+        padding: 100px;
+        border: none;
+        font-size: 20px;
+        background: none;
+        border: 2px solid black;
+        color: black;
+        border-radius: 20px;
+      } /*
+        #form{
+            text-align: center;
+           
+        } */
+      #name {
+        margin-top: 20px;
+      }
+      #pwd {
+        margin-top: 20px;
+      }
+      #userInput {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      #btn {
+        margin-top: 20px;
+        transform: translateY(50%);
+        padding: 10px;
+        border: none;
+        font-size: 20px;
+        background: black;
+        border: 2px solid black;
+        color: #fff;
+        border-radius: 20px;
+      }
+    </style>
+    <script>
+      function Login() {
+        var uName = document.form.name.value;
+        var uPwd = document.form.pwd.value;
+
+        console.log("form", uName, uPwd);
+
+        console.log(passwordValidate(uPwd));
+
+        //null validation
+        if (uName == "" || uPwd == "") {
+          document.getElementById("emptyError").innerHTML ="Please Enter missing value"
+        } else {
+          if (!passwordValidate(uPwd)) {
+            document.getElementById("result").innerHTML ="Password invalid.Please try again"
+          } else {
+            document.getElementById("result").innerHTML ="Login successful!!!"
+          }
+        }
+      }
+      function passwordValidate(uPwd) {
+        let pwdValidate = /^[*A-Za-z0-9]\w{7,}$/;
+        return pwdValidate.test(uPwd);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="login">
+      <h1>LOGIN FORM</h1>
+
+      <form id="form" name="form" action="">
+        <div id="userInput">
+          Username:
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter Username"
+            required
+          /><br />
+          Password:&nbsp;
+          <input
+            type="password"
+            name="pwd"
+            id="pwd"
+            placeholder="Enter Password"
+            required
+          /><br />
+        </div>
+        <button type="button" id="btn" onclick="Login()">Login</button>
+        <br><br><br>
+        <label id="result"></label>
+      </form>
+    </div>
+  </body>
+</html>
