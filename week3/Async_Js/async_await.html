@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1></h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice cream shop</title>
+    <script src="async_await.js"></script>
+    <style>
+      #box {
+        border: 2px solid black;
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ice cream shop</h1>
+    <ul>
+      <li>
+        <h3>Select fruit</h3>
+        <select id="fruit">
+          <option value="0">Apple</option>
+          <option value="1">Watermelon</option>
+          <option value="2">Mango</option>
+          <option value="3">Strawberry</option>
+        </select>
+      </li>
+      <li>
+        <h3>Select Holder</h3>
+        <select id="holder">
+          <option value="0">cone</option>
+          <option value="1">cup</option>
+        </select>
+      </li>
+      <li>
+        <h3>Select Toppings</h3>
+        <select id="toppings">
+          <option value="0">chocolate</option>
+          <option value="1">biscuit</option>
+          <option value="2">sprinkle</option>
+        </select>
+      </li>
+    </ul>
+    <button onclick="order()">order</button><br /><br />
+    The Process goes as:<br />
+    <div id="box">
+      <label id="process"></label>
+      <label style="color: red" id="error"></label>
+      <label id="end"></label>
+    </div>
+  </body>
 </html>
