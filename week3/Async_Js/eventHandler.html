@@ -16,12 +16,6 @@
       function onMouseOver() {
         document.getElementById("shape").style.borderRadius = "50%";
       }
-      document.getElementById("p").addEventListener("click", onClickEvent);
-
-      function onClickEvent() {
-        document.getElementById("shape").style.borderRadius =
-          "Shape is changed to circle";
-      }
       
       //callback function 
       function myCallback(){
@@ -29,7 +23,7 @@
       }
       function sayHello(){
         const date = new Date;
-        document.getElementById("cb-output").innerHTML="Hello, its been 2 seconds from the time you clicked the button" + d; 
+        document.getElementById("cb-output").innerHTML="Hello, its been 2 seconds from the time you clicked the button " + date; 
       }
     </script>
   </head>
@@ -37,9 +31,10 @@
     <h1>Event Handler and Callbacks</h1>
     <h3>Event Handler</h3>
     <div id="shape" onmouseover="onMouseOver()">
-      <p id="text">Click here to change!! </p>
+     
     </div>
     <h3>Callback</h3>
     <button onclick="myCallback()">click here!!</button>
+    <label id="cb-output"></label>
   </body>
 </html>
