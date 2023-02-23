@@ -1,0 +1,40 @@
+// .toggle{
+//     width: 200px;
+//     height: 300px;
+//     background-color: plum;
+//     transition: all 1s ease-in;
+// }
+// .toggle:hover{
+//     background-color: aquamarine;
+//     border-radius: 30%;
+//     transition: transform 125ms;
+//     transform: translateX(100px);
+// }
+.toggle label{
+    padding: 1rem 2rem;
+    border:2px solid green;
+    display: inline-block;
+    border-radius: 30px;
+
+    &::after{
+        content:"";
+        background-color: gray;
+        height: 45px;
+        width: 45px;
+        top:12px;
+        left: 35px;
+        border-radius: 30px;
+        position: absolute;
+        display: block;
+        box-sizing: border-box 2px 2px solid black;
+    }
+}
+input:checked + label{
+    background-color: blue;
+    &::after{
+        content: "";
+        left: 90px;
+    }
+}
+
+

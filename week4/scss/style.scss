@@ -1,0 +1,24 @@
+// import files
+@import 'variables';
+@import 'mixins';
+@import 'card';
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+
+body{
+    background-color: #000;
+}
+button{
+    padding:$spacing;
+    background-color: $color;
+    border-radius: 5px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+    grid-auto-rows: 10rem;
+    grid-gap: 20px;
+    margin:40px 0;
+    background-color: #000;
+}
+
+

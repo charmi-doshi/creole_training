@@ -1,0 +1,21 @@
+.list {
+  background-color: blue;
+}
+
+li {
+  display: block;
+  padding: 20px;
+  float: left;
+}
+
+.li1 {
+  background-color: aqua;
+}
+
+.li2 {
+  background-color: aquamarine;
+}
+
+.li3 {
+  background-color: pink;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: aqua;
+  padding: 2rem;
+}
+
+.intro {
+  background-image: url("https://www.commonwealthfund.org/sites/default/files/styles/countries_hero_desktop/public/country_image_Japan.jpg?h=fcdfd899&itok=eL0Jj4cw");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid blue;
+  padding: 50rem;
+}
+
+.details {
+  background-image: url("https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50rem;
+  border: 5px solid blue;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .container {
+    background-attachment: scroll;
+  }
+}/*# sourceMappingURL=parallax.css.map */

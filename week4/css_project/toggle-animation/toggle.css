@@ -1,0 +1,40 @@
+/* .toggle label {
+  padding: 1.5rem 4rem;
+  border: 2px solid green;
+  display: inline-block;
+  border-radius: 30px;
+} */
+/* .toggle label::after {
+  content: "";
+  background-color: gray;
+  height:46px;
+  width: 45px;
+  top: 10px;
+  left: 35px;
+  border-radius: 30px;
+  position: absolute;
+  display: block;
+  box-sizing: border-box 2px 2px solid black;
+} */
+
+.toggle{
+  border: 5px solid green;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+} 
+label{
+  transition:  500ms ease;
+  background: red;
+}
+/* input:checked + label {
+  background-color: blue;
+}
+input:checked + label::after {
+  content: "";
+  transition: ;
+  left: 115px;
+  background-color: aliceblue;
+} */
