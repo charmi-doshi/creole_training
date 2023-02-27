@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+* body {
+  font-family: sans-serif;
+  font-size: 55px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+[class^=row-] {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+[class^=box-] {
+  border: 2px solid black;
+  background-color: rgb(207, 127, 224);
+  box-shadow: 5px 5px 5px black;
+  padding: 1rem;
+  color: #FFF;
+  width: 33.3333333333%;
+  height: 33.3333333333vh;
+  display: grid;
+  place-items: center;
+}
+
+#size {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-30%);
+  color: red;
+  font-size: 40px;
+}
+
+@media (max-width: 650px) {
+  [class^=row-] {
+    flex-direction: column;
+  }
+  [class^=box-] {
+    width: 100%;
+  }
+}/*# sourceMappingURL=card.css.map */

@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+* body {
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid red;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_logo {
+  font-size: 4vw;
+}
+.header_menu {
+  display: flex;
+  flex-direction: row;
+  font-size: 2.5vw;
+  gap: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid blue;
+  height: 80%;
+}
+.main_img {
+  width: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url("https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg");
+}
+.main_text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.main_text-1 {
+  font-size: 10vw;
+}
+.main_text-2, .main_text-3, .main_text-4 {
+  font-size: 2vw;
+}
+
+.footer {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer [class^=footer_] img {
+  width: 3.5vw;
+  border-radius: 12px;
+}
+
+@media (max-width: 650px) {
+  .header_logo {
+    font-size: 40px;
+  }
+  .header_menu {
+    display: none;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main_img {
+    height: 200px;
+    width: 200px;
+    background-size: 100%;
+    background-position: center;
+  }
+  .main_text {
+    width: 100%;
+  }
+  .main_text-1 {
+    display: none;
+  }
+  .main_text-2, .main_text-3, .main_text-4 {
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=site.css.map */

@@ -222,14 +222,20 @@ function altCap() {
   let str = "I am a string";
   //
   let finalStr = str.charAt(0).toUpperCase();
+  let flag = 0
   for (let i = 1; i < str.length; i++) {
-    let char = finalStr.charAt(i - 1);
-    if (char === char.toUpperCase()) {
-      console.log(finalStr, char, i);
-      finalStr += str.charAt(i).toLowerCase();
-    } else if (char === char.toLowerCase()) {
+    if(str[i] != " "){
+    if (!flag) {
+      console.log(finalStr,i);
+      finalStr += str.charAt(i);
+      flag = 1
+    } else{
       finalStr += str.charAt(i).toUpperCase();
+      flag = 0;
     }
+  }else{
+     finalStr += str[i]
+  }
   }
   document.getElementById("output-11").innerHTML = finalStr;
   console.log(finalStr);

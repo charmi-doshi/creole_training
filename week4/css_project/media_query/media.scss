@@ -1,0 +1,58 @@
+$color-1 : #cdb4db ; 
+$color-2:#fff1e6;
+$color-3:#52b788;
+$color-4:#bee1e6;
+
+//breakpoints
+$mobile: 576px;
+$tablet:768px;
+$laptop:992px;
+$desktop:1200px;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    body{
+        font-family: sans-serif;
+  
+    } 
+}
+.container{
+    
+    display: grid;
+    place-items: center;
+    background-color: $color-1;
+   padding:20rem;   
+}
+#size{
+  
+    font-size:35px;
+    color: blueviolet;
+ 
+}
+.header{
+    color: #fff;
+    background-color: black;
+    padding:10px;
+}
+.footer{
+    color:#fff;
+    background-color: black;
+    padding:10px;
+}
+@media screen and (max-width:$desktop){
+    .container{
+        background-color: $color-2;
+    }
+}
+@media screen  and (max-width:$tablet){
+    .container{
+        background-color: $color-3;
+    }
+}
+@media screen and (max-width:$mobile){
+    .container{
+        background-color: $color-4;
+    }
+}

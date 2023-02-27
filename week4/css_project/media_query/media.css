@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  background-color: #cdb4db;
+  padding: 20rem;
+}
+
+#size {
+  font-size: 35px;
+  color: blueviolet;
+}
+
+.header {
+  color: #fff;
+  background-color: black;
+  padding: 10px;
+}
+
+.footer {
+  color: #fff;
+  background-color: black;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    background-color: #fff1e6;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    background-color: #52b788;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    background-color: #bee1e6;
+  }
+}/*# sourceMappingURL=media.css.map */

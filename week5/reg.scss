@@ -1,0 +1,85 @@
+$img:"./img.png";
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    body{
+        font-family: 'Roboto',sans-serif;
+        background-color: #fb745c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
+.container{
+   margin-top:10%;
+   display: flex;
+   flex-direction: row;
+   border: 2px solid black;
+   background-color: #fff; 
+   border-radius: 20px;
+
+   .img{
+  
+    border: 2px solid green;
+    background-image: url("./img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 50%;
+    width: 12rem;
+    height: 13rem;
+    padding: 13rem;
+   }
+   .card{
+    flex: 50%;
+    //padding:15rem;
+    margin:0;
+    box-shadow: 0 5px 5px black;
+    
+    .elements{
+        display: flex;
+        flex-direction: column;
+      //  padding-left: 2rem;
+        padding: 2rem;
+        border: 2px solid blue;
+        //margin-top: 2rem;
+    }
+    h2{
+       
+        
+    }
+    .link{
+        font-size: 13px;
+        color:#a7a7a7;    
+        a{
+            text-decoration: none;
+            
+            color: #fb745c;
+        }
+    }
+
+    .sub-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        button{
+            border-color: #a7a7a7;            
+            background-color: #fff;
+            padding:0.5rem;
+            border-radius: 5px;
+            margin-top:1rem;
+           
+        }
+        .fb-btn{
+            background-color: #527bcb;
+            color: #fff;
+        }
+    }
+
+
+   }
+
+}
