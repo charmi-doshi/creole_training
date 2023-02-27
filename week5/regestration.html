@@ -13,7 +13,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="img"></div>
+      <div class="img">
+        <div class="logo"></div>
+      </div>
       <div class="card">
         <!-- inner elements -->
         <div class="elements">
@@ -27,25 +29,32 @@
               Google
             </button>
             <button class="fb-btn">
-              <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              Sign up with Facebook
             </button>
           </div>
 
           <div class="hr">
             <hr />
-            or
+            <label for="pwd">or</label>
             <hr />
           </div>
-          <div class="input1">
+          <!-- input -->
+          <div class="input">
             <label for="email" class="email">Email Address</label>
-            <input type="email" placeholder="enter email" />
+            <div class="input1">
+                <i class="fa fa-envelope-o" id="icon" aria-hidden="true"></i>
+              <input type="email"  placeholder="enter email" />
+            </div>
+
+            <label class="pwd" for="pwd">Password</label>
+            <div class="input2">
+                <i class="fa fa-lock"id="icon" aria-hidden="true"></i>
+              <input type="password" placeholder="enter password" />
+            </div>
           </div>
 
-          <div class="input2">
-            <label for="pwd">Password</label>
-            <input class="pwd" type="password" placeholder="enter password" />
-          </div>
-          <button class="register">Register</button>
+          <button class="register-btn">Register</button>
         </div>
       </div>
     </div>
