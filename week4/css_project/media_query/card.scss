@@ -7,11 +7,13 @@
         font-size: 55px;
     }
 }
+
 .container{
     display: flex;
     flex-direction: column;
     gap:40px;
 }
+
 [class^="row-"]{
     display: flex;
     flex-direction: row;
