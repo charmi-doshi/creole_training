@@ -232,3 +232,17 @@
     font-size: 12px;
   }
 }
+@media (max-width: 456px) {
+    p{
+        font-size: 12px;
+    }
+    .cards {
+      flex-wrap: wrap;
+      [class^="card-"] {
+        margin-left: 5rem;
+      }
+    }
+    .details {
+      font-size: 12px;
+    }
+  }
