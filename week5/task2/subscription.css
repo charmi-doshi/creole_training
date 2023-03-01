@@ -229,9 +229,23 @@
     flex-wrap: wrap;
   }
   .cards [class^=card-] {
-    margin-left: 5rem;
+    margin-left: 2rem;
   }
   .details {
     font-size: 12px;
+  }
+}
+@media (max-width: 286px) {
+  p {
+    font-size: 10px;
+  }
+  .container {
+    margin-left: 2rem;
+  }
+  .cards {
+    flex-wrap: wrap;
+  }
+  .details {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=subscription.css.map */
