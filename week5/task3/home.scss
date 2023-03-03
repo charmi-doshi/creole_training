@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+
   body {
     display: flex;
     flex-direction: column;
@@ -8,11 +9,10 @@
 }
 .container {
   flex: 50%;
-  width: 100%;
   background-image: url("./sofa4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position:center;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
     position: absolute;
     width: 40rem;
     height: 5rem;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     margin-left: 20rem;
     display: flex;
     flex-direction: row;
@@ -56,14 +56,10 @@
   //heading
   .heading {
     text-align: center;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    margin-top: 10rem;
+    margin-top: 8rem;
   }
   //glassy effect components
   .glassy {
-    // border: 2px solid black;
     display: flex;
     flex-direction: row;
     margin-top: 7rem;
@@ -115,17 +111,17 @@
           text-shadow: 20px 20px 10px #000;
         }
         i::after {
-          //   position: absolute;
-          //   content: "";
-          //   padding: 1rem;
-          //   border-radius: 50%;
+            // position: absolute;
+            // content: "";
+            // padding: 1rem;
+            // border-radius: 50%;
 
-          //   top: 0;
-          //   z-index: 0;
-          //   color: white;
-          //   background: rgba(7, 114, 176, 0.4);
-          //   //text-align: center;
-          //   font-weight: bold;
+            // top: 0;
+            // z-index: 0;
+            // color: white;
+            // background: rgba(7, 114, 176, 0.4);
+            // //text-align: center;
+            // font-weight: bold;
         }
       }
     }
@@ -250,6 +246,7 @@
     }
   }
 }
+//details section
 .details {
   flex: 30%;
   margin-top: 2rem;
@@ -257,12 +254,203 @@
   .sub {
     margin-top: 20rem;
   }
+  .detail-cards{
+    display: flex;
+    flex-direction: row;
+    margin:1rem;
+    [class^="detail-card-"]{
+      box-shadow: 2px 2px 5px #000;
+     margin:1rem;
+      width: 15rem;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+
+      img{
+        flex:50%;
+        background-size: contain;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+
+      }
+      .detail-content{
+        flex:50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .title{
+          margin:1rem;
+          font-size: 0.7rem;
+          .price{
+            font-size: 1rem;
+          }
+        }
+        .cart-icon{
+          margin:1rem;
+        }
+       
+      }
+      .labels{
+        display: flex;
+        flex-direction: row;
+        margin:1rem;
+        [class^="label-"]{
+          border-radius: 20px;
+          background-color: rgba(255,255,255);
+          border: 2px solid orange;
+          font-size: 0.7rem;
+          color:orange;
+           padding:0.5rem;
+           margin-left: 1rem;
+        }
+      }
+    } 
+  }
+}
+//reference section
+.reference-section{
+  
+  margin:1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  [class^="grp-"]{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    [class^="big-card-"]{
+      width:20rem;
+      height:20rem;  
+      padding:3rem;
+      margin: 1rem;
+      background: url("./room1.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      box-shadow: 2px 2px 5px  black;
+    }
+    .big-card-2{
+      background: url("./room3.jpg");
+      background-size: contain;
+      border-radius: 20px;
+      background-repeat: no-repeat;
+    }
+    [class^="small-card-"]{
+    width:10rem;
+  
+      height:20rem;  
+      padding:3rem;
+      margin: 1rem;
+      background: url("./room2.jpg");
+      background-size: cover;
+      border-radius: 20px;
+      background-repeat: no-repeat;
+      box-shadow: 2px 2px 5px black;
+    }
+    .small-card-2{
+      background: url("./romm5.jpg");
+      background-size: cover;
+      border-radius: 20px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.visit-section{
+  left:0;
+  height: 15rem;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  h1{
+    margin-top: 2rem;
+    color:#fff;
+    label{
+      color: rgb(224, 179, 121);
+    }
+   
+  }
+  p{
+    color:#fff;
+  }
+  button{
+   color:#fff;
+   border-radius: 30px;
+    padding:1rem;
+    background:rgb(224, 179, 121) ;
+  }
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .search{
+    border: 2px solid #a7a7a7;
+      width: 20rem;
+      height: 2rem;
+      border-radius: 20px;
+      margin-left: 10rem;
+      display: flex;
+      flex-direction: row;
+
+      input {
+        //margin-left: 1rem;
+        background: transparent;
+       border: none;
+        outline-color: rgba(167, 167, 167, 10);
+        width: 17rem;
+        height: 2rem;
+       
+        margin-left: 0.8rem;
+        accent-color: #fff;
+     
+      }
+      button{
+        background-color: rgb(224, 179, 121);
+        color:#fff;
+        border: none;
+        width:10rem;
+        height: 1.5rem;
+        font-size: 1rem;
+       margin: 0.2rem;
+        border-radius: 20px;
+      }
+   
+  }
+  .table{
+    display: flex;
+    flex-direction: row;
+   margin: 2rem;
+    [class^="footer-heading-"]{
+     margin: 2rem;  
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+}
+.end{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .hr{
+    width:20rem;
+    height:0.1rem;
+    background-color: #000;
+  }
+  .copyright{
+    margin:2rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
   body {
     align-items: center;
     flex-wrap: wrap;
+   
   }
   .container {
     flex-wrap: wrap;
@@ -276,19 +464,9 @@
         top: 5rem;
       }
     }
-    
+    .footer{
+      flex-direction: column;
+    }
   }
-//   .cards{
-//     flex-wrap: wrap;
-//     [class^="card"]{
-//         flex-wrap: wrap;
-//         .symbol{
-//             font-size: 10px;
-//         }
-//     .card-content{
-//         .card-heading{
-//             font-size: 10px;
-//         }
-//     }
-//   }}
+
 }

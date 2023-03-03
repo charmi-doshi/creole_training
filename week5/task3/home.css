@@ -9,7 +9,6 @@
 
 .container {
   flex: 50%;
-  width: 100%;
   background-image: url("./sofa4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,7 +22,6 @@
   position: absolute;
   width: 40rem;
   height: 5rem;
-  margin-top: 2rem;
   margin-left: 20rem;
   display: flex;
   flex-direction: row;
@@ -55,7 +53,7 @@
 }
 .container .heading {
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 .container .glassy {
   display: flex;
@@ -229,6 +227,187 @@
 .details .sub {
   margin-top: 20rem;
 }
+.details .detail-cards {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
+.details .detail-cards [class^=detail-card-] {
+  box-shadow: 2px 2px 5px #000;
+  margin: 1rem;
+  width: 15rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.details .detail-cards [class^=detail-card-] img {
+  flex: 50%;
+  background-size: contain;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.details .detail-cards [class^=detail-card-] .detail-content {
+  flex: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.details .detail-cards [class^=detail-card-] .detail-content .title {
+  margin: 1rem;
+  font-size: 0.7rem;
+}
+.details .detail-cards [class^=detail-card-] .detail-content .title .price {
+  font-size: 1rem;
+}
+.details .detail-cards [class^=detail-card-] .detail-content .cart-icon {
+  margin: 1rem;
+}
+.details .detail-cards [class^=detail-card-] .labels {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
+.details .detail-cards [class^=detail-card-] .labels [class^=label-] {
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid orange;
+  font-size: 0.7rem;
+  color: orange;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.reference-section {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reference-section [class^=grp-] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.reference-section [class^=grp-] [class^=big-card-] {
+  width: 20rem;
+  height: 20rem;
+  padding: 3rem;
+  margin: 1rem;
+  background: url("./room1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px black;
+}
+.reference-section [class^=grp-] .big-card-2 {
+  background: url("./room3.jpg");
+  background-size: contain;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+}
+.reference-section [class^=grp-] [class^=small-card-] {
+  width: 10rem;
+  height: 20rem;
+  padding: 3rem;
+  margin: 1rem;
+  background: url("./room2.jpg");
+  background-size: cover;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 5px black;
+}
+.reference-section [class^=grp-] .small-card-2 {
+  background: url("./romm5.jpg");
+  background-size: cover;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+}
+
+.visit-section {
+  left: 0;
+  height: 15rem;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.visit-section h1 {
+  margin-top: 2rem;
+  color: #fff;
+}
+.visit-section h1 label {
+  color: rgb(224, 179, 121);
+}
+.visit-section p {
+  color: #fff;
+}
+.visit-section button {
+  color: #fff;
+  border-radius: 30px;
+  padding: 1rem;
+  background: rgb(224, 179, 121);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer .search {
+  border: 2px solid #a7a7a7;
+  width: 20rem;
+  height: 2rem;
+  border-radius: 20px;
+  margin-left: 10rem;
+  display: flex;
+  flex-direction: row;
+}
+.footer .search input {
+  background: transparent;
+  border: none;
+  outline-color: rgb(167, 167, 167);
+  width: 17rem;
+  height: 2rem;
+  margin-left: 0.8rem;
+  accent-color: #fff;
+}
+.footer .search button {
+  background-color: rgb(224, 179, 121);
+  color: #fff;
+  border: none;
+  width: 10rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  margin: 0.2rem;
+  border-radius: 20px;
+}
+.footer .table {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+}
+.footer .table [class^=footer-heading-] {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.end .hr {
+  width: 20rem;
+  height: 0.1rem;
+  background-color: #000;
+}
+.end .copyright {
+  margin: 2rem;
+  font-size: 1rem;
+}
 
 @media (max-width: 576px) {
   body {
@@ -246,5 +425,8 @@
   }
   .container .glassy .badge-2 {
     top: 5rem;
+  }
+  .container .footer {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=home.css.map */
