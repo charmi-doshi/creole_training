@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  body{
+    text-align: center;
+  }
+}
+nav {
+  ul {
+   
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    li {
+      padding: 2rem;
+      
+     text-align: center;
+      .link{
+        text-decoration: none;
+        padding:1rem;
+        color: rgb(48, 155, 71);
+      }
+      .link:hover{
+        color: #fff;
+        background-color: #000;
+        border-radius: 20%;
+
+      }
+        }
+  }
+}

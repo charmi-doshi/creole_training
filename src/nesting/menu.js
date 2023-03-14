@@ -1,5 +1,6 @@
 import React from "react";
 
+//using props
 function Card(props) {
     
     const { title, body } = props
@@ -11,10 +12,11 @@ function Card(props) {
     )
   }
   
+  //nesting card in menu
 export default  function Menu() {
     return (
       <div>
-        <Card title={title} body={body} />
+        <Card title="This is Nested component" body="Hello!!" />
       </div>
      );
   }
