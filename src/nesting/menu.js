@@ -5,9 +5,11 @@ function Card(props) {
     
     const { title, body } = props
     return (
-      <div className="card-container">
+      <div className="card">
+        <div className="card-body">
         <h2>{title}</h2>
-         <div>{body}</div>
+        </div>
+         <div className="card-text">{body}</div>
       </div>
     )
   }

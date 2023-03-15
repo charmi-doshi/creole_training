@@ -6,6 +6,8 @@ import About from "./router/About";
 import Contact from "./router/Contact";
 import Home from "./router/Home";
 import Menu from "./nesting/menu";
+import conditionalSpinner from "./conditionalRendering/conditionalSpinner";
+import Users from "./lists/Users";
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
           <li>
             <Link className="link" to="/menu">Menu</Link>
           </li>
+          <li>
+            <Link className="link" to="/conditional">Conditional rendering</Link>
+          </li>
+          <li>
+            <Link className="link" to="/list">List</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -32,6 +40,8 @@ function App() {
         <Route path="/about" Component={About} />
         <Route path="/contact" Component={Contact} />
         <Route path="/menu" Component={Menu} />
+        <Route path="/list" Component={Users} />
+        <Route path="/conditional" Component={conditionalSpinner}/>
         
       </Routes>
     </div>
